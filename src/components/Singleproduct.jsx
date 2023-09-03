@@ -30,7 +30,9 @@ export default function SingleProduct() {
 
   useEffect(() => {
     // Fetch detailed information about the shoe using the API
-    fetch(`http://localhost:3000/singleproduct/${id}`)
+    fetch(
+      `https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/${id}`
+    )
       .then((response) => response.json()) // Parse the response as JSON
       .then((data) => {
         // Map the _id to shoe.id
@@ -109,11 +111,15 @@ export default function SingleProduct() {
         <Categorybar />
       </div>
       <div className="history-bar">
-        <a href={`http://localhost:3001/brands/${shoe.brand_name}`}>
+        <a
+          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/brands/${shoe.brand_name}`}
+        >
           {shoe.brand_name}
         </a>
         <span>&gt;</span>
-        <a href={`http://localhost:3001/type/${shoe.prod_type}`}>
+        <a
+          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/type/${shoe.prod_type}`}
+        >
           {shoe.prod_type}
         </a>
         <span>&gt;</span>

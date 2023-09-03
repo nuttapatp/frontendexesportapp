@@ -7,9 +7,12 @@ const Newsletter = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/email/", {
-        email,
-      });
+      const response = await axios.post(
+        "https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/email/",
+        {
+          email,
+        }
+      );
       if (response.status === 200 || response.status === 201) {
         alert("Email submitted successfully!");
         setEmail("");
