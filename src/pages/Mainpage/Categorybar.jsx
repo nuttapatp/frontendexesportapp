@@ -20,7 +20,9 @@ function Categorybar({ onBrandChange, onTypeChange }) {
     // Fetch brand data using Axios and set it to brandData state
     async function fetchBrandData() {
       try {
-        const response = await axios.get("http://localhost:3000/brands/");
+        const response = await axios.get(
+          "https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/"
+        );
         const allBrands = response.data.brands;
         setBrandData(allBrands);
       } catch (error) {
@@ -35,7 +37,7 @@ function Categorybar({ onBrandChange, onTypeChange }) {
     console.log("Selected brand:", brandName);
     try {
       const response = await axios.get(
-        `http://localhost:3000/brands/${brandName}`
+        `https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/${brandName}`
       );
       const allShoes = response.data.products;
 
@@ -54,7 +56,9 @@ function Categorybar({ onBrandChange, onTypeChange }) {
   useEffect(() => {
     async function fetchTypeData() {
       try {
-        const response = await axios.get("http://localhost:3000/type/");
+        const response = await axios.get(
+          "https://backendexesportapp-93e0c67ee387.herokuapp.com/type/"
+        );
         const allTypes = response.data.type;
         setTypeData(allTypes);
       } catch (error) {
@@ -69,7 +73,7 @@ function Categorybar({ onBrandChange, onTypeChange }) {
     console.log("Selected type:", typeName);
     try {
       const response = await axios.get(
-        `http://localhost:3000/type/${typeName}`
+        `https://backendexesportapp-93e0c67ee387.herokuapp.com/${typeName}`
       );
       const allShoes = response.data.products;
 

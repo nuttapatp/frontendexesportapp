@@ -81,10 +81,12 @@ export default function Shoelist() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `http://localhost:3000/brands/${brandName}`
+          `https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/${brandName}`
         );
         const products = response.data.products;
-        const brandResponse = await axios.get("http://localhost:3000/brands/");
+        const brandResponse = await axios.get(
+          "https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/"
+        );
         const brands = brandResponse.data.brands;
         const selectedBrandData = brands.find(
           (brand) => brand.brand_name === selectedBrand

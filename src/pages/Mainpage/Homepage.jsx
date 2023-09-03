@@ -48,10 +48,9 @@ const Homepage = () => {
     <>
       <Navbar />
       <div className="searchbar-sticky-container">
-        <Searchbar /> 
+        <Searchbar />
         <Categorybar />
       </div>
-     
 
       <div className="flash-sale-container">
         <span className="flash-sale-line"></span>
@@ -60,17 +59,17 @@ const Homepage = () => {
       </div>
       <Slider {...sliderSettings}>
         <div>
-          <a href="http://localhost:3001/singleproduct/64f2cd91a98d3d800c113ba6">
+          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6">
             <img src={imageflash1} alt="Image 1" className="main-background" />
           </a>
         </div>
         <div>
-          <a href="http://localhost:3001/singleproduct/64edcaed381454ee9ce121f8">
+          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64edcaed381454ee9ce121f8">
             <img src={imageflash2} alt="Image 2" className="main-background" />
           </a>
         </div>
         <div>
-          <a href="http://localhost:3001/singleproduct/64f2ea5b5b377956bc859541">
+          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2ea5b5b377956bc859541">
             <img src={imageflash3} alt="Image 3" className="main-background" />
           </a>
         </div>
@@ -85,31 +84,29 @@ const Homepage = () => {
         <div className="arrival-content">
           <Slider {...sliderSettings}>
             <div>
-              <a href="http://localhost:3001/singleproduct/64f2d1c9a98d3d800c113ccd">
+              <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2d1c9a98d3d800c113ccd">
                 <img src={imagenew1} alt="Image" className="main2-background" />
               </a>
             </div>
             <div>
-              <a href="http://localhost:3001/singleproduct/64f2c834a98d3d800c113af1">
+              <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2c834a98d3d800c113af1">
                 <img src={imagenew2} alt="Image" className="main2-background" />
               </a>
             </div>
             <div>
-              <a href="http://localhost:3001/singleproduct/64f2e777a98d3d800c113e86">
+              <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2e777a98d3d800c113e86">
                 <img src={imagenew3} alt="Image" className="main2-background" />
               </a>
             </div>
           </Slider>
 
           <div>
-            <a href="http://localhost:3001/singleproduct/64f2c8ffa98d3d800c113af7">
+            <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2c8ffa98d3d800c113af7">
               <img src={gif1} alt="GIF" className="new-arrival-gif" />
             </a>
           </div>
         </div>
       </div>
-
-
 
       <StoreDetails
         logo1={logo1}

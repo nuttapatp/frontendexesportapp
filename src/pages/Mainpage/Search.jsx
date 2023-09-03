@@ -35,7 +35,9 @@ export default function Search() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/products");
+        const response = await fetch(
+          "https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/products"
+        );
         const data = await response.json();
         const allProducts = data.products;
 

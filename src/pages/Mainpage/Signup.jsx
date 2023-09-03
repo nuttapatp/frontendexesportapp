@@ -15,11 +15,14 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const result = await axios.post("http://localhost:3000/customer/", {
-        name,
-        email,
-        password,
-      });
+      const result = await axios.post(
+        "https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/customer/",
+        {
+          name,
+          email,
+          password,
+        }
+      );
       console.log(result);
       navigate("/login"); // Use the navigate function to navigate
     } catch (error) {
