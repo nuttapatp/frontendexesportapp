@@ -38,7 +38,7 @@ export default function Typeshoe() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/type/${typeName}`
+          `https://backendexesportapp-93e0c67ee387.herokuapp.com/type/${typeName}`
         );
         const products = response.data.products;
         setProductData(products);
