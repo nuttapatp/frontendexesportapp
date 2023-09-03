@@ -37,7 +37,7 @@ export default function Cart() {
         cartItems.map(async (item) => {
           if (item.id && !details[item.id]) {
             const response = await fetch(
-              `http://localhost:3000/singleproduct/${item.id}`
+              `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${item.id}`
             );
             const data = await response.json();
             details[item.id] = data;
@@ -97,15 +97,18 @@ const handleOrder = async () => {
   };
 
   try {
-    const response = await fetch("http://localhost:3000/orders", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-    
-        Authorization: `Bearer ${localStorage.getItem("userToken")}`,
-      },
-      body: JSON.stringify(orderData),
-    });
+    const response = await fetch(
+      "https://backendexesportapp-93e0c67ee387.herokuapp.com/orders",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+
+          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+        },
+        body: JSON.stringify(orderData),
+      }
+    );
 
     if (response.ok) {
       alert("Order placed successfully!");

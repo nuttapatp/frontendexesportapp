@@ -36,7 +36,7 @@ export default function Search() {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/products"
+          "https://backendexesportapp-93e0c67ee387.herokuapp.com/products"
         );
         const data = await response.json();
         const allProducts = data.products;

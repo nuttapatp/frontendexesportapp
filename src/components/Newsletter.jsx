@@ -8,7 +8,7 @@ const Newsletter = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/email/",
+        "https://backendexesportapp-93e0c67ee387.herokuapp.com/email/",
         {
           email,
         }

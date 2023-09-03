@@ -31,7 +31,7 @@ export default function SingleProduct() {
   useEffect(() => {
     // Fetch detailed information about the shoe using the API
     fetch(
-      `https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/${id}`
+      `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${id}`
     )
       .then((response) => response.json()) // Parse the response as JSON
       .then((data) => {
@@ -112,13 +112,13 @@ export default function SingleProduct() {
       </div>
       <div className="history-bar">
         <a
-          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/brands/${shoe.brand_name}`}
+          href={`https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/${shoe.brand_name}`}
         >
           {shoe.brand_name}
         </a>
         <span>&gt;</span>
         <a
-          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/type/${shoe.prod_type}`}
+          href={`https://backendexesportapp-93e0c67ee387.herokuapp.com/type/${shoe.prod_type}`}
         >
           {shoe.prod_type}
         </a>

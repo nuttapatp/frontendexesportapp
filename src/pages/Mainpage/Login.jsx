@@ -19,7 +19,9 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const customers = await axios.get("http://localhost:3000/customer/");
+      const customers = await axios.get(
+        "https://backendexesportapp-93e0c67ee387.herokuapp.com/customer/"
+      );
       const foundUser = customers.data.find(
         (user) => user.email === email && user.password === password
       );
