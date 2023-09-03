@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,800&display=swap');
+
+
+
+
+/* nav.css */
+
+
+.nav-bar {
+  background-color: #fff;
+  color: #1B1B1B;
+  padding: 0px;
+  height: 40px;
+  display: flex;
+  font-weight:400 ;
+  line-height: 1.5;
+    justify-content: space-between;
+  margin-bottom: 10px;
+    /* align-items: center; */
+    z-index: 200; 
+  
+
+}
+
+
+ .nav-button {
+ background:#D1612A;
+  outline: none;
+  border: none;
+  padding: 2px;
+  margin-left: 40px;
+  display: flex;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+} 
+
+.nav-button-saving {
+    flex: 1;
+}
+
+.nav-button-saving a {
+    text-decoration: none 
+}
+
+
+.nav-menu {
+  display: flex;
+  /* flex: 2; */
+  margin-right: 0px;
+}
+
+.nav-menu a {
+   
+   text-decoration: none; 
+   margin-right: 20px;
+   margin-top: 14px;
+   font-family: "Open Sans",sans-serif;
+  font-style: normal;
+   display: flex;
+
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+.user-welcome {
+    background-color: #f3f4f6;  
+
+    border-radius: 5px; 
+  
+    font-weight: bold;  
+    color: #333;  
+    transition: background-color 0.3s;  
+  
+    margin-right: 20px;
+     font-family: "Open Sans",sans-serif;
+}
+
+.user-welcome:hover {
+    background-color: #e2e4e6; 
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+     margin-top: 14px ;
+         z-index: 200; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: none;
+    width: 90%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}

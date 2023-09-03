@@ -1,0 +1,251 @@
+/* store-option */
+
+.store-option{
+  height: 250px;
+  width: 100%;
+  /* background-color: red; */
+  margin-top: 30px;
+    text-align: center; 
+    margin-left: 50px;
+}
+
+.logo-list{
+display: inline-block;
+  text-align: left; 
+    text-align: center; 
+}
+
+
+
+.logo-container {
+  display: inline-block;
+  margin-right: 150px; 
+  vertical-align: top; 
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.logo-container p{
+ color: black; 
+ margin-top: 20px;
+}
+
+.logo-image {
+  width: 90px;
+  height: 80PX;
+  margin-left: 15px;
+}
+
+.logo-text {
+ 
+  text-align: center; 
+}
+
+
+
+/* last */
+.last-page {
+  width: 100%;
+
+  height: 500px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  grid-template-rows: 1fr 1fr;
+  gap: 10px; 
+  margin-top: 50px;
+}
+
+.my-account {
+
+  grid-column: 1;
+  grid-row: 1;
+  text-align: left;
+}
+
+.line1{
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 130px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  
+}
+
+.line2{
+  font-size: 14px;
+  /* margin-top: 15px; */
+   margin-left: 130px;
+   text-decoration: none;
+   color: black;
+   margin-bottom: 12px;
+
+}
+
+.my-account .line2 {
+    position: relative; 
+    /* color: #7A7A7A;  */
+    text-decoration: none; 
+     margin-left: 130px; 
+}
+
+.my-account .line2:hover {
+   color: #7A7A7A;
+}
+
+.my-account .line2::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;  
+    left: 50%; 
+    transform: translateX(-50%);  
+    width: 0; 
+    height: 2px; 
+    background-color: #7A7A7A; 
+    transition: width 0.3s;  
+}
+
+.my-account .line2:hover::before {
+    width: 100%;  
+    left: 0;
+    transform: translateX(0); 
+}
+
+.my-account .line2:visited {
+    /* color: black;  */
+}
+
+
+
+
+
+.line3{
+  font-size: 14px;
+  margin-top: 15px;
+   margin-left: 130px;
+   text-decoration: none;
+   color: black;
+  
+}
+
+.my-order .line3, .my-order .line3 a {
+  color: black;
+ 
+}
+.my-order .line3 {
+    position: relative; 
+    /* color: #7A7A7A;  */
+    text-decoration: none; 
+     margin-left: 130px; 
+}
+
+
+.my-order .line3:hover {
+   color: #7A7A7A;
+}
+
+.my-order .line3::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;  
+    left: 50%; 
+    transform: translateX(-50%);  
+    width: 0; 
+    height: 2px; 
+    background-color: #7A7A7A; 
+    transition: width 0.3s;  
+ 
+}
+
+
+
+
+.my-order .line3:hover::before {
+    width: 100%;  
+    left: 0;
+    transform: translateX(0); 
+}
+
+.my-order .line3:visited {
+    /* color: black;  */
+}
+
+
+
+
+
+.my-order {
+
+  grid-column: 2;
+  grid-row: 1; /* Place in the first row */
+}
+
+.customer-service {
+
+  grid-column: 3;
+  grid-row: 1; /* Place in the first row */
+}
+
+.app-download {
+  grid-column: 4;
+  grid-row: 1; /* Place in the first row */
+  text-align: left;
+}
+
+.contact-us{
+  grid-row: 2;
+  grid-column: span 4;
+  text-align: center;
+place-items: center;  
+display: grid;
+
+}
+
+
+
+.contact-header{
+  margin-top: 40px;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: #D1612A;
+  border-radius: 20px;
+  display: block;
+  width: 400px;
+  color: white;
+
+}
+
+.app-download-logo{
+  width: 200px;
+   margin-left: 130px;
+   margin-top: 20px;
+}
+.contact-logo{
+  width: 70px;
+  height: 70px;
+  margin-right:60px ;
+  margin-top: 30px;
+}
+
+.product-container {
+  position: relative;
+  display: inline-block;
+}
+
+.new-banner {
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+
+.follow-container{
+  margin-left: 30px;
+}

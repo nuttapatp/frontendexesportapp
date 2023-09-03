@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat&family=Noto+Sans+Thai:wght@200&family=Open+Sans&family=Poppins:ital,wght@1,800&display=swap');
+
+
+
+.homepage-container {
+  position: relative;
+  /* Add other styling as needed */
+}
+
+.searchbar-sticky-container {
+  position: sticky;
+  top: 0;
+  background-color: #fff; 
+  z-index: 100; 
+}
+
+
+.history-bar{
+    width: 100%;
+    color:red;
+    /* background-color: aquamarine; */
+    height: 40px;
+}
+
+
+
+
+.product-single {
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  width: 900px; 
+  margin-left: 400px; 
+  margin-top: 100px;
+}
+
+.brand-name{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.product-name{
+    font-size: 18px !important;
+  
+    margin-top: 20px !important;
+     margin-left: 0px !important;
+}
+
+.product-details {
+  /* flex: 0; */
+  /* padding: 20px; */
+  width: 500px;
+  font-family:   "Open Sans",sans-serif;
+  margin-left: 100px;
+}
+
+.product-price{
+    font-size: 20px;
+     margin-left: 0px!important;
+    margin-top: 20px;
+}
+
+.product-des{
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+}
+
+.product-image {
+  max-width: 400px; 
+  margin-left: 20px; 
+}
+
+.product-image {
+  max-width: 400px; 
+  margin-left: 20px; 
+  transition: transform 0.3s; 
+}
+
+.product-image:hover {
+  transform: scale(1.3);
+}
+
+
+.product-details p{
+    margin-top: 50px;
+}
+
+.product-buy {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.column {
+  flex: 1;
+}
+
+.size-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.size-label{
+    font-weight: bold;
+}
+
+.size-result{
+    font-weight: lighter;
+    margin-left: 5px;
+
+}
+
+.size-button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.size-button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+  width: 50px;
+  transition: background-color 0.3s;
+}
+
+.size-button:hover {
+  background-color: #F5A438;
+}
+
+.size-button.selected {
+  background-color: #f8cfcd;
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  
+}
+
+.quantity-input span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.quantity-input input {
+  width:50px;
+  padding: 5px;
+}
+
+.product-buy-cast {
+  display: flex;
+  align-items: flex-end;
+}
+
+.add-to-cart-button {
+  padding: 10px 20px;
+  background-color: #D6672B;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 180px;
+}
+
+.add-to-cart-button:hover {
+  background-color:#F5A438;
+}
+
+
+.product-container {
+  position: relative;
+  display: inline-block;
+}
+
+.product-single {
+  position: relative;
+}
+
+.new-banner {
+  position: absolute;
+  top: 10px;  
+  left: 10px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: grey;
+ 
+}
+
+.sale-price-size {
+    font-size: 26px; 
+    font-weight: bold; 
+}
+
+.product-price{
+  font-size: 20px;
+}
+
+.sale-price{
+  color: red;
+  font-size: 25px;
+}
+
+.history-bar {
+    font-size: 14px;
+    color: #666;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.history-bar > span, .history-bar > a {
+    margin: 0 10px; 
+}
+
+.history-bar > a {
+    color: black;  
+    text-decoration: none;  
+    transition: color 0.2s;  
+}
+
+.history-bar > a:hover {
+    color: #7A7A7A; 
+}
+
+
+
+/* Style for the main product image */
+.product-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover; 
+}
+
+/* Style for the vertical bar that contains thumbnail images */
+.vertical-thumbnail-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;  
+    left: -80px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+/* Styles for each thumbnail */
+.thumbnail-image {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer; 
+    border: 2px solid transparent;
+    transition: border 0.2s;
+}
+
+
+
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+button[onclick*="up"], button[onclick*="down"] {
+    position: absolute;
+    top: calc(100% + 10px); 
+}
+
+button[onclick*="up"] {
+    left: calc(50% - 60px); 
+}
+
+button[onclick*="down"] {
+    left: calc(50% + 10px);
+}
+
+
+
+
+.product-image-container {
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-change-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.vertical-thumbnail-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.vertical-thumbnail-bar img {
+    width: 50px;
+    height: auto;
+    margin: 5px 0;
+    cursor: pointer;
+}

@@ -1,0 +1,160 @@
+
+/* ShoeList */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300&family=Lato:ital,wght@0,300;0,400;0,700;1,700&family=Montserrat&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,800&display=swap');
+
+
+.header-cart{
+
+  font-family:   "Open Sans",sans-serif;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.empty-cart-message {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+
+.cart-all{
+
+  margin-left: 50px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cart-content {
+  flex: 1;
+}
+.heading{
+  margin-top: 30px;
+  color: red;
+  margin-left: 100px;
+  margin-bottom: 30px;
+   font-family:   "Open Sans",sans-serif;
+}
+
+.cart-product-grid {
+
+  width: 900px;
+}
+
+
+.cart-item {
+
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+.cart-item img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-details {
+  flex: 2;
+  line-height: 3;
+}
+
+.right-details {
+  flex: 1;
+  text-align: right;
+  line-height: 3;
+}
+
+.cart-item-total {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.detail-item-brand{
+  font-weight: bold;
+}
+
+button {
+  background-color: #D1612A;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+   font-family:   "Open Sans",sans-serif;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #F5A438;
+  transform: scale(1.1); 
+}
+
+
+/* summary  */
+
+.summary-total {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-total h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 4;
+}
+
+.cart-summary {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-left: 100px;
+  margin-right: 30px;
+  
+}
+.summary-total-item{
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.summary-total-grand{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    
+}
+
+
+.sale-price-size {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-left: 20px;
+    color: #FF0000;
+}
+
+.order-button{
+  width: 200px;
+   margin-top: 50px;
+  
+}
