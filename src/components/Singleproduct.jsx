@@ -112,13 +112,13 @@ export default function SingleProduct() {
       </div>
       <div className="history-bar">
         <a
-          href={`https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/${shoe.brand_name}`}
+          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/brands/${shoe.brand_name}`}
         >
           {shoe.brand_name}
         </a>
         <span>&gt;</span>
         <a
-          href={`https://backendexesportapp-93e0c67ee387.herokuapp.com/type/${shoe.prod_type}`}
+          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/type/${shoe.prod_type}`}
         >
           {shoe.prod_type}
         </a>
