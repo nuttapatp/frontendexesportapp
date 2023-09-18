@@ -125,9 +125,13 @@
 
 @media screen and (max-width: 768px) {
     .nav-bar{
-      width: 100px;
+      width: 100%;
     }
  .nav-button {
-    width: 30px;
+    width: 50px;
 } 
+
+  .nav-menu{
+    width: 50%;
+  }
 }
