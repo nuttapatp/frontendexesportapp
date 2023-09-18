@@ -112,17 +112,9 @@ export default function SingleProduct() {
         <Categorybar />
       </div>
       <div className="history-bar">
-        <a
-          href={`https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/${shoe.brand_name}`}
-        >
-          {shoe.brand_name}
-        </a>
+        <Link to={`/brands/${shoe.brand_name}`}>{shoe.brand_name}</Link>
         <span>&gt;</span>
-        <a
-          href={`https://backendexesportapp-93e0c67ee387.herokuapp.com/type/${shoe.prod_type}`}
-        >
-          {shoe.prod_type}
-        </a>
+        <Link to={`/type/${shoe.prod_type}`}>{shoe.prod_type}</Link>
         <span>&gt;</span>
 
         {shoe.prod_name}
