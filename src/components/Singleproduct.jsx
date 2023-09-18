@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../pages/Mainpage/Navbar";
 import Searchbar from "../pages/Mainpage/Searchbar";
 import "./singleproduct.css"; 
+import { Link } from "react-router-dom";
 
 import StoreDetails from "./StoreDetails";
 import Newsletter from "./Newsletter";
@@ -111,17 +112,9 @@ export default function SingleProduct() {
         <Categorybar />
       </div>
       <div className="history-bar">
-        <a
-          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/brands/${shoe.brand_name}`}
-        >
-          {shoe.brand_name}
-        </a>
+        <Link to={`/brands/${shoe.brand_name}`}>{shoe.brand_name}</Link>
         <span>&gt;</span>
-        <a
-          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/type/${shoe.prod_type}`}
-        >
-          {shoe.prod_type}
-        </a>
+        <Link to={`/type/${shoe.prod_type}`}>{shoe.prod_type}</Link>
         <span>&gt;</span>
 
         {shoe.prod_name}
