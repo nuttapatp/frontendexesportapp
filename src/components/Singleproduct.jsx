@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../pages/Mainpage/Navbar";
 import Searchbar from "../pages/Mainpage/Searchbar";
 import "./singleproduct.css"; 
+import { Link } from "react-router-dom";
 
 import StoreDetails from "./StoreDetails";
 import Newsletter from "./Newsletter";
