@@ -25,7 +25,7 @@
         height: 150px; 
     }
     .new-arrival-gif{
-      height: 150px;
+      height: 150px  !important;
     }
 }
 
