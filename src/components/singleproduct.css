@@ -263,6 +263,9 @@
     left: -80px; 
     top: 50%; 
     transform: translateY(-50%); 
+      flex: 0 0 50px;
+ 
+     margin-top: 150px;
 }
 
 /* Styles for each thumbnail */
@@ -325,12 +328,7 @@ button {
     cursor: pointer;
 }
 
-.vertical-thumbnail-bar {
-  flex: 0 0 50px;
-  margin-right: 20px; 
-  margin-top: 150px;
 
-}
 
 .vertical-thumbnail-bar img {
     width: 50px;
