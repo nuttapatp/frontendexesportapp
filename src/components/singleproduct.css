@@ -301,6 +301,7 @@ button[onclick*="down"] {
   align-items: flex-start;
   margin-top: 100px;
   width: 900px; 
+  margin-left: 0px;
 }
 .product-image-container {
   flex: 1;
