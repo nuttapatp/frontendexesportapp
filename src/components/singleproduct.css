@@ -301,7 +301,6 @@ button[onclick*="down"] {
   align-items: flex-start;
   margin-top: 100px;
   width: 900px; 
-  margin-left: 400px; 
 }
 .product-image-container {
   flex: 1;
@@ -331,4 +330,24 @@ button {
     height: auto;
     margin: 5px 0;
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .product-image-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vertical-thumbnail-bar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .product-image-container {
+    text-align: center;
+  }
 }
