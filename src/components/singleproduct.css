@@ -264,7 +264,7 @@
     top: 50%; 
     transform: translateY(-50%); 
       flex: 0 0 50px;
- 
+    margin-left: 0;
      margin-top: 150px;
 }
 
