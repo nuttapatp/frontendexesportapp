@@ -84,24 +84,24 @@ const Homepage = () => {
         <div className="arrival-content">
           <Slider {...sliderSettings}>
             <div>
-              <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2d1c9a98d3d800c113ccd">
+              <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2d1c9a98d3d800c113ccd">
                 <img src={imagenew1} alt="Image" className="main2-background" />
               </a>
             </div>
             <div>
-              <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2c834a98d3d800c113af1">
+              <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2c834a98d3d800c113af1">
                 <img src={imagenew2} alt="Image" className="main2-background" />
               </a>
             </div>
             <div>
-              <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2e777a98d3d800c113e86">
+              <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2e777a98d3d800c113e86">
                 <img src={imagenew3} alt="Image" className="main2-background" />
               </a>
             </div>
           </Slider>
 
           <div>
-            <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2c8ffa98d3d800c113af7">
+            <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2c8ffa98d3d800c113af7">
               <img src={gif1} alt="GIF" className="new-arrival-gif" />
             </a>
           </div>

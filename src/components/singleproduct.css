@@ -257,15 +257,8 @@
 
 /* Style for the vertical bar that contains thumbnail images */
 .vertical-thumbnail-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;  
-    left: -80px; 
-    top: 50%; 
-    transform: translateY(-50%); 
-      flex: 0 0 50px;
-    margin-left: 0;
-     margin-top: 150px;
+  flex: 0 0 60px; 
+  margin-right: 20px;
 }
 
 /* Styles for each thumbnail */
@@ -305,10 +298,13 @@ button[onclick*="down"] {
 
 .product-image-section {
   display: flex;
-  flex-direction: row-reverse; 
+  align-items: flex-start;
+  margin-top: 100px;
+  width: 900px; 
+  margin-left: 400px; 
 }
 .product-image-container {
-  flex: 1; 
+  flex: 1;
 }
 
 .thumbnail-image {
