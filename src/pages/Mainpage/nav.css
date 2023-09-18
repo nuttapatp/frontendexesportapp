@@ -121,3 +121,13 @@
 .dropdown-content button:hover {
     background-color: #f1f1f1;
 }
+
+
+@media screen and (max-width: 768px) {
+    .nav-bar{
+      width: 100px;
+    }
+ .nav-button {
+    width: 30px;
+} 
+}

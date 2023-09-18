@@ -22,7 +22,10 @@
 
 @media screen and (max-width: 768px) {
     .main2-background {
-        height: 100px; 
+        height: 150px; 
+    }
+    .new-arrival-gif{
+      height: 150px;
     }
 }
 
