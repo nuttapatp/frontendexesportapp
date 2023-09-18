@@ -249,3 +249,17 @@ display: grid;
 .follow-container{
   margin-left: 30px;
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .store-option{
+      width: 100%;
+  }
+
+  
+  .last-page{
+    width: 100%;
+  }
+
+}
