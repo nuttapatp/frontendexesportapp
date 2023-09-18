@@ -131,33 +131,35 @@ export default function SingleProduct() {
       <div className="product-single">
         {shoe.new_arrival && <span className="new-banner">New</span>}
 
-        <div className="product-image-container">
-          <img
-            src={productImages[selectedImage]}
-            alt={shoe.prod_name}
-            className="product-image"
-          />
+        <div className="product-image-section">
+          <div className="vertical-thumbnail-bar">
+            {productImages.map((imgSrc, index) => (
+              <img
+                key={index}
+                src={imgSrc}
+                alt={`Thumbnail ${index}`}
+                className={`thumbnail-image ${
+                  selectedImage === index ? "active" : ""
+                }`}
+                onClick={() => setSelectedImage(index)}
+              />
+            ))}
+          </div>
 
-          <div className="image-change-controls">
-            <button onClick={() => handleImageChange("up")}>Up</button>
-            <button onClick={() => handleImageChange("down")}>Down</button>
+          <div className="product-image-container">
+            <img
+              src={productImages[selectedImage]}
+              alt={shoe.prod_name}
+              className="product-image"
+            />
+
+            <div className="image-change-controls">
+              <button onClick={() => handleImageChange("up")}>Up</button>
+              <button onClick={() => handleImageChange("down")}>Down</button>
+            </div>
           </div>
         </div>
-
-        <div className="vertical-thumbnail-bar">
-          {productImages.map((imgSrc, index) => (
-            <img
-              key={index}
-              src={imgSrc}
-              alt={`Thumbnail ${index}`}
-              className={`thumbnail-image ${
-                selectedImage === index ? "active" : ""
-              }`}
-              onClick={() => setSelectedImage(index)}
-            />
-          ))}
-        </div>
-
+        
         <div className="product-details">
           <div className="brand-name">
             {shoe.brand_name === "NEWBALANCE" ? "NEW BALANCE" : shoe.brand_name}

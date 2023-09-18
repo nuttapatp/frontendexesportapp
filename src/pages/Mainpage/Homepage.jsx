@@ -64,12 +64,12 @@ const Homepage = () => {
           </a>
         </div>
         <div>
-          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64edcaed381454ee9ce121f8">
+          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/64edcaed381454ee9ce121f8">
             <img src={imageflash2} alt="Image 2" className="main-background" />
           </a>
         </div>
         <div>
-          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/64f2ea5b5b377956bc859541">
+          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/64f2ea5b5b377956bc859541">
             <img src={imageflash3} alt="Image 3" className="main-background" />
           </a>
         </div>
