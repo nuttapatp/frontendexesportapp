@@ -112,9 +112,17 @@ export default function SingleProduct() {
         <Categorybar />
       </div>
       <div className="history-bar">
-        <Link to={`/brands/${shoe.brand_name}`}>{shoe.brand_name}</Link>
+        <a
+          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/brands/${shoe.brand_name}`}
+        >
+          {shoe.brand_name}
+        </a>
         <span>&gt;</span>
-        <Link to={`/type/${shoe.prod_type}`}>{shoe.prod_type}</Link>
+        <a
+          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/type/${shoe.prod_type}`}
+        >
+          {shoe.prod_type}
+        </a>
         <span>&gt;</span>
 
         {shoe.prod_name}
