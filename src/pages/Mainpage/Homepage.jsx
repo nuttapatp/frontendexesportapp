@@ -59,17 +59,17 @@ const Homepage = () => {
       </div>
       <Slider {...sliderSettings}>
         <div>
-          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6">
+          <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6">
             <img src={imageflash1} alt="Image 1" className="main-background" />
           </a>
         </div>
         <div>
-          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/64f2e134a98d3d800c113dc8">
+          <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2e134a98d3d800c113dc8">
             <img src={imageflash2} alt="Image 2" className="main-background" />
           </a>
         </div>
         <div>
-          <a href="https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/singleproduct/64f2ea5b5b377956bc859541">
+          <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2ea5b5b377956bc859541">
             <img src={imageflash3} alt="Image 3" className="main-background" />
           </a>
         </div>

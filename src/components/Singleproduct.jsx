@@ -113,13 +113,13 @@ export default function SingleProduct() {
       </div>
       <div className="history-bar">
         <a
-          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/brands/${shoe.brand_name}`}
+          href={`https://frontendexesportapp.vercel.app/brands/${shoe.brand_name}`}
         >
           {shoe.brand_name}
         </a>
         <span>&gt;</span>
         <a
-          href={`https://frontendexesportapp-l2drnxcsl-nuttapatp.vercel.app/type/${shoe.prod_type}`}
+          href={`https://frontendexesportapp.vercel.app/type/${shoe.prod_type}`}
         >
           {shoe.prod_type}
         </a>
@@ -159,7 +159,7 @@ export default function SingleProduct() {
             </div>
           </div>
         </div>
-        
+
         <div className="product-details">
           <div className="brand-name">
             {shoe.brand_name === "NEWBALANCE" ? "NEW BALANCE" : shoe.brand_name}
