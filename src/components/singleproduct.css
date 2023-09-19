@@ -259,8 +259,8 @@
 
 /* Style for the main product image */
 .product-image {
-    width: 300px;
-    height: 400px;
+    max-width: 300px;
+    max-height: 400px;
     object-fit: cover; 
 }
 
@@ -371,7 +371,7 @@ button {
   }
 
   .vertical-thumbnail-bar{
-    margin-left: 50px;
+    margin-left: 100px;
   }
 
   .product-image-section {
@@ -379,10 +379,11 @@ button {
   }
 
   .product-details{
-    margin-left: 40px;
+    margin-left: 100px;
     margin-right: 40px;
     width: auto;
   }
+
 
     .single-product-container{
   /* background-color: red; */
@@ -392,10 +393,15 @@ button {
 
 }
 
-  
 .product-buy{
   /* background-color: red; */
 }
+
+.product-image{
+  width: 150px;
+  height: 250px;
+}
+
 
 }
 
