@@ -128,6 +128,7 @@ export default function SingleProduct() {
         {shoe.prod_name}
       </div>
 
+      <div className="single-product-container">
       <div className="product-single">
         {shoe.new_arrival && <span className="new-banner">New</span>}
 
@@ -260,7 +261,7 @@ export default function SingleProduct() {
           </div>
         </div>
       </div>
-
+</div>
       <StoreDetails
         logo1={logo1}
         logo2={logo2}

@@ -24,6 +24,8 @@ margin-left: 20px;
   background: gray;
   position: relative;
   margin-left: 200px;
+  display: flex;
+
  
 }
 
@@ -36,7 +38,7 @@ margin-left: 20px;
   font-size: 20px;
   padding: 8px 40px 8px 20px;
   border: none;
-
+ flex: 1; 
   background-color: #F5A438;
 }
 
@@ -97,4 +99,175 @@ margin-left: 20px;
     text-align: left;
     
 }
+
+
+@media screen and (max-width: 515px) {
+
+ .box-container{
+  width: 30px;
+  position: absolute;
+  /* right: 0; */
+  left:50px;
+ 
+  
+}
+  .input-form{
+    width: 120px;
+  }
+
+.form-container{
+  position: relative;
+}
+
+.button-form {
+  position: absolute;
+  top: 0;
+  right:0px ;
+    right:-120px ;
+}
+
+.logo img.main-background {
+  width: 220px;
+  height: 100px;
+}
+
+
+
+}
+
+
+
+
+
+@media screen and (min-width:516px) and (max-width: 744px) {
+  
+
+ .box-container{
+  width: 30px;
+  position: absolute;
+  /* right: 0; */
+  left:150px;
+ 
+  
+}
+  .input-form{
+    width: 120px;
+  }
+
+.form-container{
+  position: relative;
+}
+
+.button-form {
+  position: absolute;
+  top: 0;
+  right:0px ;
+    right:-120px ;
+}
+
+.logo img.main-background {
+  width: 220px;
+  height: 100px;
+}
+
+
+
+}
+
+
+@media screen and (min-width:745px) and (max-width: 849px) {
+
+.box-container{
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100px;
+  
+}
+  
+.button-form {
+  position: absolute;
+  top: 0;
+  right:-160px ;
+}
+
+.form-container{
+  /* background: gray; */
+  position: relative;
+  /* margin-left: 200px; */
+  display: flex;
+
+ 
+}
+
+  .input-form{
+    width: 150px;
+  }
+
+}
+
+
+
+
+@media screen and (min-width: 850px) and (max-width: 1083px) {
+
+  
+.box-container{
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 580px;
+  
+}
+  
+.button-form {
+  position: absolute;
+  top: 0;
+  /* right:-180px ; */
+}
+
+.form-container{
+  /* background: gray; */
+  position: relative;
+  /* margin-left: 200px; */
+  display: flex;
+
+ 
+}
+  .input-form{
+    width: 150px;
+  }
+
+
+
+
+}
+
+
+
+@media screen and (min-width: 1084px) and (max-width: 1157px) {
+ 
+.box-container{
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 1000px;
+  
+}
+  
+.button-form {
+  position: absolute;
+  top: 0;
+  right:0px ;
+}
+
+.form-container{
+  /* background: gray; */
+  position: relative;
+  /* margin-left: 200px; */
+  display: flex; 
+}
+  .input-form{
+    width: 300px;
+  }
+
+}
+
 

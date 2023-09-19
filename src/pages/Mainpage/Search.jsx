@@ -93,9 +93,9 @@ export default function Search() {
             </div>
             <input
               type="range"
-              value={priceRange[1]} // Use the max price as the value
+              value={priceRange[1]} 
               min="0"
-              max="10000" // Set your actual maximum price
+              max="10000" 
               step="50"
               onChange={(e) => setPriceRange([0, Number(e.target.value)])}
             />

@@ -123,3 +123,59 @@
 .filter-bar label {
   margin-right: 10px;
 }
+
+
+
+
+@media screen and (max-width: 479px) {
+
+
+   
+  .filter-bar select, .filter-bar input[type='range']  {
+     padding: 0px;
+    justify-content:center !important;
+    font-size: 15px;
+ 
+  }
+
+  .filter-bar {
+    font-size: 12px !important;
+  }
+
+
+}
+
+
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+ 
+
+  .filter-bar{
+    padding: 0px;
+    justify-content:center !important;
+    font-size: 15px;
+ 
+  
+  }
+ 
+  .filter-bar select, .filter-bar input[type='range']  {
+    margin: 0px 20px !important;
+       padding:0px !important;
+       font-size: 12px;
+  }
+
+
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1059px) {
+ 
+
+}
+
+
+@media screen and (min-width: 1060px) and (max-width: 1472px) {
+
+
+}
