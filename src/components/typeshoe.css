@@ -44,7 +44,7 @@
 
   .additional-image {
   width: 96%;
-  height: 720px;
+  /* height: 720px; */
   margin-top: 20px;
   justify-content: center;
   display: block;

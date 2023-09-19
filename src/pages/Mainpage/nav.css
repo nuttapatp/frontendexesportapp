@@ -124,12 +124,12 @@
 
 
 
-@media screen and (max-width: 564px) {
+@media screen and (max-width: 598px) {
     .nav-bar{
       width: 100%;
     }
  .nav-button {
-    width: 120px;
+    /* width: 120px; */
     font-size: 10px;
 } 
 
@@ -142,17 +142,17 @@
 }
 
 
-@media screen and (min-width: 565px)and (max-width: 768px) {
+@media screen and (min-width: 599px)and (max-width: 768px) {
     .nav-bar{
       width: 100%;
     }
  .nav-button {
-    width: 150px;
+    /* width: 150px; */
 } 
 
   .nav-menu{
     width: 300px;
-    font-size: 20px;
+     font-size: 15px;
   
   }
 
