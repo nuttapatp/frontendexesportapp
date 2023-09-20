@@ -8,9 +8,6 @@
 
 .main-background{
   width: 100%;
-  /* margin-top: 100px; */
-  /* margin-left: 20px;
-  margin-right: 20px; */
   margin: 0px 0px; 
   height: auto;
 }
@@ -19,15 +16,6 @@
     width: 100%; 
     height:500px;
 }
-
-
-
-
-
-
-
-
-
 
 .homepage-container {
   position: relative;
@@ -87,17 +75,11 @@
 }
 
 
-
-
-
 .new-arrival-gif {
     width: 80%; 
     height: 500px;
     margin-left: 20px;
 }
-
-
-
 
 
 .news-letter {

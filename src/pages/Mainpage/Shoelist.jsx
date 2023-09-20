@@ -231,13 +231,14 @@ export default function Shoelist() {
             </div>{" "}
             {/* Added Here */}
             <Link to={`/singleproduct/${product._id}`} className="shoe-link">
+                    {product.new_arrival && <div className="new-banner">NEW</div>}
               <img
                 src={product.product_image}
                 alt={product.prod_name}
                 className="shoe-image"
               />
 
-              {product.new_arrival && <div className="new-banner">NEW</div>}
+      
             </Link>
             {product.on_sale ? (
               <div className="price-container">

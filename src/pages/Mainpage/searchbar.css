@@ -106,13 +106,12 @@ margin-left: 20px;
  .box-container{
   width: 30px;
   position: absolute;
-  /* right: 0; */
-  left:50px;
+  left:-40px;
  
   
 }
   .input-form{
-    width: 25px;
+    width: 140px;
   }
 
 .form-container{
@@ -124,15 +123,14 @@ margin-left: 20px;
   position: absolute;
   top: 0;
   right:0px ;
-    right:-70px ;
+    right:-140px ;
 }
 
 .logo img.main-background {
-  width: 220px;
-  height: 100px;
+  width: 150px;
+  height: 60px;
+  margin-left: 10px;
 }
-
-
 
 }
 
@@ -192,9 +190,7 @@ margin-left: 20px;
 }
 
 .form-container{
-  /* background: gray; */
   position: relative;
-  /* margin-left: 200px; */
   display: flex;
 
  
@@ -222,13 +218,10 @@ margin-left: 20px;
 .button-form {
   position: absolute;
   top: 0;
-  /* right:-180px ; */
 }
 
 .form-container{
-  /* background: gray; */
   position: relative;
-  /* margin-left: 200px; */
   display: flex;
 
  
@@ -236,8 +229,6 @@ margin-left: 20px;
   .input-form{
     width: 150px;
   }
-
-
 
 
 }
@@ -260,9 +251,7 @@ margin-left: 20px;
 }
 
 .form-container{
-  /* background: gray; */
   position: relative;
-  /* margin-left: 200px; */
   display: flex; 
 }
   .input-form{

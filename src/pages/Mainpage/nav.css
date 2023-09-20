@@ -4,7 +4,6 @@
 
 
 
-/* nav.css */
 
 
 .nav-bar {
@@ -17,7 +16,6 @@
   line-height: 1.5;
     justify-content: space-between;
   margin-bottom: 10px;
-    /* align-items: center; */
     z-index: 200; 
   
 
@@ -47,7 +45,6 @@
 
 .nav-menu {
   display: flex;
-  /* flex: 2; */
   margin-right: 0px;
 }
 
@@ -69,13 +66,10 @@
 
 .user-welcome {
     background-color: #f3f4f6;  
-
     border-radius: 5px; 
-  
     font-weight: bold;  
     color: #333;  
     transition: background-color 0.3s;  
-  
     margin-right: 20px;
      font-family: "Open Sans",sans-serif;
 }
@@ -129,7 +123,7 @@
       width: 100%;
     }
  .nav-button {
-    /* width: 120px; */
+    margin-left: 30px;
     font-size: 10px;
 } 
 
@@ -146,9 +140,6 @@
     .nav-bar{
       width: 100%;
     }
- .nav-button {
-    /* width: 150px; */
-} 
 
   .nav-menu{
     width: 300px;

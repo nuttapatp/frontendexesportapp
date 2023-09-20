@@ -6,7 +6,6 @@
 
 .homepage-container {
   position: relative;
-  /* Add other styling as needed */
 }
 
 .searchbar-sticky-container {
@@ -20,7 +19,6 @@
 .history-bar{
     width: 100%;
     color:red;
-    /* background-color: aquamarine; */
     height: 40px;
 }
 
@@ -29,24 +27,17 @@
 
 .product-single {
   display: flex;
-  /* align-items: center; */
-  /* background-color: red; */
-  /* width: 400px;  */
-  /* margin-left: 120px;  */
   margin-top: 100px;
 }
 
 .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
 }
 
 
-.product-single {
-  /* position: relative; */
-}
+
 
 .brand-name{
     font-size: 25px;
@@ -55,14 +46,11 @@
 
 .product-name{
     font-size: 18px !important;
-  
     margin-top: 20px !important;
      margin-left: 0px !important;
 }
 
 .product-details {
-  /* flex: 0; */
-  /* padding: 20px; */
   width: 500px;
   font-family:   "Open Sans",sans-serif;
   margin-left: 100px;
@@ -194,22 +182,18 @@
 }
 
 
-.product-container {
-  position: relative;
-  display: inline-block;
-}
 
 
 .new-banner {
-  position: absolute;
-  top: 10px;  
-  left: 10px;
+  width: 60px;
   background-color: red;
   color: white;
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 3px;
-  z-index: 1;
+  z-index: 3;
+  margin-top: 0px;
+  margin-left: 20px;
 }
 
 .strikethrough {
@@ -264,13 +248,11 @@
     object-fit: cover; 
 }
 
-/* Style for the vertical bar that contains thumbnail images */
 .vertical-thumbnail-bar {
   flex: 0 0 60px; 
   margin-right: 20px;
 }
 
-/* Styles for each thumbnail */
 .thumbnail-image {
     width: 60px;
     height: 80px;
@@ -309,9 +291,6 @@ button[onclick*="down"] {
   display: flex;
   align-items: flex-start;
   margin-top: 100px;
-  /* width: 900px;  */
-  /* margin-left: 100ppx; */
-
 }
 .product-image-container {
   flex: 1;
@@ -345,8 +324,6 @@ button {
 
 
 
-
-
 @media screen and (max-width: 564px) {
 
 
@@ -361,7 +338,6 @@ button {
   .product-details {
       justify-content: center;
        align-items: center;
-  /* display: grid; */
     
   }
 
@@ -386,16 +362,12 @@ button {
 
 
     .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
 
 }
 
-.product-buy{
-  /* background-color: red; */
-}
 
 .product-image{
   width: 150px;
@@ -422,7 +394,6 @@ button {
   
   .product-image-section,
   .product-details {
-    /* width: 100%; */
   }
   .product-image-section {
     margin-top: 20px;
@@ -435,7 +406,6 @@ button {
 
 
     .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
@@ -451,7 +421,6 @@ button {
     justify-content: center;
     align-items: center;
     display: flex;
-    /* flex-direction: column; */
     margin-top: 20px;
   
   }
@@ -459,8 +428,8 @@ button {
   .product-image-section,
   .product-details {
     width: 400px;
-        /* justify-content: center; */
-        margin-left: 0px;
+  
+        margin-left: 50px;
   }
   .product-image-section {
     margin-top: 20px;
@@ -471,7 +440,6 @@ button {
   }
 
   .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
@@ -487,10 +455,7 @@ button {
  
   .product-single{
     margin-left: 150px;
-    
+  
   }
-
-
-
 
 }
