@@ -3,6 +3,7 @@
 .store-option{
   height: 250px;
   width: 100%;
+  /* background-color: red; */
   margin-top: 30px;
     text-align: center; 
     margin-left: 50px;
@@ -44,6 +45,7 @@ display: inline-block;
 
 
 
+/* last */
 .last-page {
   width: 100%;
 
@@ -84,6 +86,7 @@ display: inline-block;
 
 .my-account .line2 {
     position: relative; 
+    /* color: #7A7A7A;  */
     text-decoration: none; 
      margin-left: 130px; 
 }
@@ -110,6 +113,11 @@ display: inline-block;
     transform: translateX(0); 
 }
 
+.my-account .line2:visited {
+    /* color: black;  */
+}
+
+
 
 
 
@@ -128,7 +136,7 @@ display: inline-block;
 }
 .my-order .line3 {
     position: relative; 
-
+    /* color: #7A7A7A;  */
     text-decoration: none; 
      margin-left: 130px; 
 }
@@ -160,6 +168,10 @@ display: inline-block;
     transform: translateX(0); 
 }
 
+.my-order .line3:visited {
+    /* color: black;  */
+}
+
 
 
 
@@ -167,18 +179,18 @@ display: inline-block;
 .my-order {
 
   grid-column: 2;
-  grid-row: 1; 
+  grid-row: 1; /* Place in the first row */
 }
 
 .customer-service {
 
   grid-column: 3;
-  grid-row: 1; 
+  grid-row: 1; /* Place in the first row */
 }
 
 .app-download {
   grid-column: 4;
-  grid-row: 1; 
+  grid-row: 1; /* Place in the first row */
   text-align: left;
 }
 
@@ -222,6 +234,16 @@ display: grid;
   display: inline-block;
 }
 
+.new-banner {
+  position: absolute;
+  top: 10px; 
+  left: 10px; 
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+}
 
 
 .follow-container{
@@ -286,7 +308,7 @@ display: grid;
 
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-
+  /* For .store-option */
   .store-option {
     height: 0px; 
     margin-top: 15px;
@@ -297,13 +319,14 @@ display: grid;
    display: none;
   }
 
-
+  /* For .logo-container */
   .logo-container {
     
     margin-right: 30px;
     margin-top: 25px;
   }
 
+  /* For .logo-image */
   .logo-image {
     width: 45px;
     height: 40px;
@@ -413,5 +436,10 @@ display: grid;
   .logo-container{
     margin-right: 70px;
   }
+
+
+
+
+
 
 }

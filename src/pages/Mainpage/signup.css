@@ -41,7 +41,7 @@
   content: ""; 
  background-image: url('..//../assets/images/login-wallpaper.jpg');
   background-size: cover;
-  opacity: 0.9; 
+  opacity: 0.9; /* Adjust the opacity as needed */
   position: absolute;
   top: 0;
   left: 0;

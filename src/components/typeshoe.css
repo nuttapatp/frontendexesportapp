@@ -6,7 +6,7 @@
 
 .homepage-container {
   position: relative;
-
+  /* Add other styling as needed */
 }
 
 .searchbar-sticky-container {
@@ -16,6 +16,7 @@
   z-index: 100; 
 
 }
+
 
 
 
@@ -43,6 +44,7 @@
 
   .additional-image {
   width: 96%;
+  /* height: 720px; */
   margin-top: 20px;
   justify-content: center;
   display: block;
@@ -85,6 +87,8 @@
 .shoe-item {
   
   padding: 10px;
+  /* text-align: center; */
+  /* background-color: #f7f7f7; */
     overflow: hidden;
    transition: box-shadow 0.3s ease;
    width: 280px;
@@ -132,6 +136,7 @@
 }
 
 .sale-price {
+  /* text-decoration: line-through; */
   color: red;
  text-decoration: none !important;
 }

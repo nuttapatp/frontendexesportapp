@@ -1,8 +1,8 @@
 import React from "react";
-import Slider from "react-slick";
+import Slider from "react-slick"; 
 
 import Navbar from "./Navbar";
-import Searchbar from "./Searchbar";
+import Searchbar from "./Searchbar"; 
 import Categorybar from "./Categorybar";
 
 import StoreDetails from "../../components/StoreDetails";
@@ -21,12 +21,12 @@ import logo2 from "../../assets/logo/Shoe.png";
 import logo3 from "../../assets/logo/guard.png";
 import logo4 from "../../assets/logo/store.png";
 import logo5 from "../../assets/logo/order return.png";
-import logo6 from "../../assets/logo/app_store_badge.png";
-import logo7 from "../../assets/logo/google_play_store.png";
-import logo8 from "../../assets/logo/instragram.png";
-import logo9 from "../../assets/logo/line.png";
-import logo10 from "../../assets/logo/facebook.png";
-import logo11 from "../../assets/logo/messenger.png";
+import logo6 from "../../assets/logo/app_store_badge.png"
+import logo7 from "../../assets/logo/google_play_store.png"
+import logo8 from "../../assets/logo/instragram.png"
+import logo9 from "../../assets/logo/line.png"
+import logo10 from "../../assets/logo/facebook.png"
+import logo11 from "../../assets/logo/messenger.png"
 
 import "./home.css";
 
@@ -34,7 +34,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const Homepage = () => {
-    const sliderSettings = {
+
+  const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,

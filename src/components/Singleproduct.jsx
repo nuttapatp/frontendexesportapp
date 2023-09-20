@@ -76,7 +76,6 @@ export default function SingleProduct() {
     };
 
     console.log("cartItem:", cartItem);
-    console.log(shoe.new_arrival);
 
     const updatedCartItems = [...cartItems, cartItem];
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
@@ -130,140 +129,139 @@ export default function SingleProduct() {
       </div>
 
       <div className="single-product-container">
-        <div className="product-single">
-          <div className="product-image-section">
-            <div className="vertical-thumbnail-bar">
-              {productImages.map((imgSrc, index) => (
-                <img
-                  key={index}
-                  src={imgSrc}
-                  alt={`Thumbnail ${index}`}
-                  className={`thumbnail-image ${
-                    selectedImage === index ? "active" : ""
-                  }`}
-                  onClick={() => setSelectedImage(index)}
-                />
-              ))}
-            </div>
+      <div className="product-single">
+        {shoe.new_arrival && <span className="new-banner">New</span>}
 
-            <div className="product-image-container">
-              {shoe.new_arrival && <div className="new-banner">New</div>}
+        <div className="product-image-section">
+          <div className="vertical-thumbnail-bar">
+            {productImages.map((imgSrc, index) => (
               <img
-                src={productImages[selectedImage]}
-                alt={shoe.prod_name}
-                className="product-image"
+                key={index}
+                src={imgSrc}
+                alt={`Thumbnail ${index}`}
+                className={`thumbnail-image ${
+                  selectedImage === index ? "active" : ""
+                }`}
+                onClick={() => setSelectedImage(index)}
               />
-
-              <div className="image-change-controls">
-                <button onClick={() => handleImageChange("up")}>Up</button>
-                <button onClick={() => handleImageChange("down")}>Down</button>
-              </div>
-            </div>
+            ))}
           </div>
 
-          <div className="product-details">
-            <div className="brand-name">
-              {shoe.brand_name === "NEWBALANCE"
-                ? "NEW BALANCE"
-                : shoe.brand_name}
+          <div className="product-image-container">
+            <img
+              src={productImages[selectedImage]}
+              alt={shoe.prod_name}
+              className="product-image"
+            />
+
+            <div className="image-change-controls">
+              <button onClick={() => handleImageChange("up")}>Up</button>
+              <button onClick={() => handleImageChange("down")}>Down</button>
             </div>
-            <div className="product-name">{shoe.prod_name}</div>
+          </div>
+        </div>
 
-            {shoe.on_sale ? (
-              <>
-                <div className="product-price strikethrough">
-                  ฿ {shoe.prod_price}
-                </div>
-                <div className="sale-price">Sale: ฿ {shoe.sale_price}</div>
-              </>
-            ) : (
-              <div className="product-price">฿ {shoe.prod_price}</div>
-            )}
+        <div className="product-details">
+          <div className="brand-name">
+            {shoe.brand_name === "NEWBALANCE" ? "NEW BALANCE" : shoe.brand_name}
+          </div>
+          <div className="product-name">{shoe.prod_name}</div>
 
-            <p className="product-des"> {shoe.prod_desc}</p>
+          {shoe.on_sale ? (
+            <>
+              <div className="product-price strikethrough">
+                ฿ {shoe.prod_price}
+              </div>
+              <div className="sale-price">Sale: ฿ {shoe.sale_price}</div>
+            </>
+          ) : (
+            <div className="product-price">฿ {shoe.prod_price}</div>
+          )}
 
-            <div className="product-buy">
-              <div className="flex-container">
-                <div className="column">
-                  <div className="size-options">
-                    <div className="size-label">
-                      Size <span className="size-result"> {selectedSize}</span>
-                    </div>
+          <p className="product-des"> {shoe.prod_desc}</p>
 
-                    <div className="size-button-container">
-                      <button
-                        className={`size-button ${
-                          selectedSize === "UK 7" ? "selected" : ""
-                        }`}
-                        onClick={() => handleSizeButtonClick("UK 7")}
-                      >
-                        UK 7
-                      </button>
-                      <button
-                        className={`size-button ${
-                          selectedSize === "UK 8" ? "selected" : ""
-                        }`}
-                        onClick={() => handleSizeButtonClick("UK 8")}
-                      >
-                        UK 8
-                      </button>
-                      <button
-                        className={`size-button ${
-                          selectedSize === "UK 9" ? "selected" : ""
-                        }`}
-                        onClick={() => handleSizeButtonClick("UK 9")}
-                      >
-                        UK 9
-                      </button>
-                      <button
-                        className={`size-button ${
-                          selectedSize === "UK 10" ? "selected" : ""
-                        }`}
-                        onClick={() => handleSizeButtonClick("UK 10")}
-                      >
-                        UK 10
-                      </button>
-                      <button
-                        className={`size-button ${
-                          selectedSize === "UK 11" ? "selected" : ""
-                        }`}
-                        onClick={() => handleSizeButtonClick("UK 11")}
-                      >
-                        UK 11
-                      </button>
-                    </div>
+          <div className="product-buy">
+            <div className="flex-container">
+              <div className="column">
+                <div className="size-options">
+                  <div className="size-label">
+                    Size <span className="size-result"> {selectedSize}</span>
+                  </div>
+
+                  <div className="size-button-container">
+                    <button
+                      className={`size-button ${
+                        selectedSize === "UK 7" ? "selected" : ""
+                      }`}
+                      onClick={() => handleSizeButtonClick("UK 7")}
+                    >
+                      UK 7
+                    </button>
+                    <button
+                      className={`size-button ${
+                        selectedSize === "UK 8" ? "selected" : ""
+                      }`}
+                      onClick={() => handleSizeButtonClick("UK 8")}
+                    >
+                      UK 8
+                    </button>
+                    <button
+                      className={`size-button ${
+                        selectedSize === "UK 9" ? "selected" : ""
+                      }`}
+                      onClick={() => handleSizeButtonClick("UK 9")}
+                    >
+                      UK 9
+                    </button>
+                    <button
+                      className={`size-button ${
+                        selectedSize === "UK 10" ? "selected" : ""
+                      }`}
+                      onClick={() => handleSizeButtonClick("UK 10")}
+                    >
+                      UK 10
+                    </button>
+                    <button
+                      className={`size-button ${
+                        selectedSize === "UK 11" ? "selected" : ""
+                      }`}
+                      onClick={() => handleSizeButtonClick("UK 11")}
+                    >
+                      UK 11
+                    </button>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="flex-container">
-                <div className="column">
-                  <div className="quantity-input">
-                    <span>Quantity :</span>
-                    <input
-                      type="number"
-                      min="1"
-                      value={quantity}
-                      onChange={handleQuantityChange}
-                    />
-                  </div>
+            <div className="flex-container">
+              <div className="column">
+                <div className="quantity-input">
+                  <span>Quantity :</span>
+                  <input
+                    type="number"
+                    min="1"
+                    value={quantity}
+                    onChange={handleQuantityChange}
+                  />
                 </div>
+              </div>
 
-                <div className="column">
-                  <div className="product-buy-cast">
-                    <button
-                      className="add-to-cart-button"
-                      onClick={handleAddToCartClick}
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
+              <div className="column">
+                <div className="product-buy-cast">
+                  <button
+                    className="add-to-cart-button"
+                    onClick={handleAddToCartClick}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+</div>
       <StoreDetails
         logo1={logo1}
         logo2={logo2}

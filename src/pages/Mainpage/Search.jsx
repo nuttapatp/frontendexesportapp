@@ -93,9 +93,9 @@ export default function Search() {
             </div>
             <input
               type="range"
-              value={priceRange[1]}
+              value={priceRange[1]} 
               min="0"
-              max="10000"
+              max="10000" 
               step="50"
               onChange={(e) => setPriceRange([0, Number(e.target.value)])}
             />
@@ -114,9 +114,7 @@ export default function Search() {
             onChange={(e) => setSelectedType(e.target.value)}
           >
             <option value="SOCCER">Soccer</option>
-            <option value="RUNNING">Running</option>
             <option value="FREESTYLE">Freestyle</option>
-            <option value="FUTSAL">Footsal</option>
           </select>
         </div>
         <h2>Search Results for "{searchQuery}"</h2>
