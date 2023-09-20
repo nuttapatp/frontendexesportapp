@@ -1,9 +1,7 @@
 /* store-option */
-
 .store-option{
   height: 250px;
   width: 100%;
-  /* background-color: red; */
   margin-top: 30px;
     text-align: center; 
     margin-left: 50px;
@@ -76,7 +74,6 @@ display: inline-block;
 
 .line2{
   font-size: 14px;
-  /* margin-top: 15px; */
    margin-left: 130px;
    text-decoration: none;
    color: black;
@@ -86,7 +83,6 @@ display: inline-block;
 
 .my-account .line2 {
     position: relative; 
-    /* color: #7A7A7A;  */
     text-decoration: none; 
      margin-left: 130px; 
 }
@@ -113,9 +109,6 @@ display: inline-block;
     transform: translateX(0); 
 }
 
-.my-account .line2:visited {
-    /* color: black;  */
-}
 
 
 
@@ -136,7 +129,6 @@ display: inline-block;
 }
 .my-order .line3 {
     position: relative; 
-    /* color: #7A7A7A;  */
     text-decoration: none; 
      margin-left: 130px; 
 }
@@ -168,29 +160,23 @@ display: inline-block;
     transform: translateX(0); 
 }
 
-.my-order .line3:visited {
-    /* color: black;  */
-}
-
-
-
 
 
 .my-order {
 
   grid-column: 2;
-  grid-row: 1; /* Place in the first row */
+  grid-row: 1; 
 }
 
 .customer-service {
 
   grid-column: 3;
-  grid-row: 1; /* Place in the first row */
+  grid-row: 1; 
 }
 
 .app-download {
   grid-column: 4;
-  grid-row: 1; /* Place in the first row */
+  grid-row: 1; 
   text-align: left;
 }
 
@@ -232,17 +218,6 @@ display: grid;
 .product-container {
   position: relative;
   display: inline-block;
-}
-
-.new-banner {
-  position: absolute;
-  top: 10px; 
-  left: 10px; 
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
-  font-weight: bold;
-  border-radius: 3px;
 }
 
 

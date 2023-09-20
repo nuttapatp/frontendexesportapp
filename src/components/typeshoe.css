@@ -6,7 +6,6 @@
 
 .homepage-container {
   position: relative;
-  /* Add other styling as needed */
 }
 
 .searchbar-sticky-container {
@@ -16,8 +15,6 @@
   z-index: 100; 
 
 }
-
-
 
 
     .navbar-logo {
@@ -44,7 +41,6 @@
 
   .additional-image {
   width: 96%;
-  /* height: 720px; */
   margin-top: 20px;
   justify-content: center;
   display: block;
@@ -87,9 +83,7 @@
 .shoe-item {
   
   padding: 10px;
-  /* text-align: center; */
-  /* background-color: #f7f7f7; */
-    overflow: hidden;
+  overflow: hidden;
    transition: box-shadow 0.3s ease;
    width: 280px;
     position: relative;
@@ -136,7 +130,6 @@
 }
 
 .sale-price {
-  /* text-decoration: line-through; */
   color: red;
  text-decoration: none !important;
 }
@@ -153,4 +146,47 @@
 
 .filter-bar{
   margin-top: 20px;
+}
+
+.new-banner-type{
+    background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  z-index: 1;
+  width: 60px;
+   position: absolute;;
+  right: 220px;
+  top: 0px;
+}
+
+
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+  .shoe-list {
+    margin: 0 auto;
+    width: 80%; 
+}
+
+
+
+
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1059px) {
+   .shoe-list{
+    margin-left: 40px;
+  }
+
+}
+
+@media screen and (min-width: 1060px) and (max-width: 1472px) {
+  
+  .shoe-list{
+    margin-left: 40px;
+  }
 }

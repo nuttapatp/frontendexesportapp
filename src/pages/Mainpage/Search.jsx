@@ -93,9 +93,9 @@ export default function Search() {
             </div>
             <input
               type="range"
-              value={priceRange[1]} 
+              value={priceRange[1]}
               min="0"
-              max="10000" 
+              max="10000"
               step="50"
               onChange={(e) => setPriceRange([0, Number(e.target.value)])}
             />
@@ -114,15 +114,18 @@ export default function Search() {
             onChange={(e) => setSelectedType(e.target.value)}
           >
             <option value="SOCCER">Soccer</option>
+            <option value="RUNNING">Running</option>
+            <option value="FUTSAL">Fustal</option>
             <option value="FREESTYLE">Freestyle</option>
           </select>
         </div>
-        <h2>Search Results for "{searchQuery}"</h2>
+        <h2 className="search-result"> Search Results for "{searchQuery}"</h2>
         <div className="shoe-list">
           {searchResults.map((product) => (
             <div key={product._id} className="shoe-item">
               <a href={`/singleproduct/${product._id}`} className="shoe-link">
                 {" "}
+                {product.new_arrival && <div className="new-bannerSearch">NEW</div>}
                 <img
                   src={product.product_image}
                   alt={product.prod_name}

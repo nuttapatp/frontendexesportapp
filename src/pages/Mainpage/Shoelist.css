@@ -71,7 +71,18 @@
   flex: 0 0 100%;
 }
 
-
+.new-bannerShoelist {
+  position: absolute;
+  right: 210px;
+  top: 30px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  z-index: 1;
+  width: 60px;
+  }
 
 .shoe-list {
   margin: 0 auto;
@@ -190,6 +201,8 @@
   
     .shoe-list{
     justify-items: center;
+    margin: 0 auto;
+    width: 80%;
   }
 
 
@@ -229,7 +242,10 @@
 
     .shoe-list{
     margin-left: 40px;
+    margin: 0 auto;
+    width: 80%; 
   }
+
 
 }
 

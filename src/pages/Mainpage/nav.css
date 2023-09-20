@@ -129,13 +129,14 @@
       width: 100%;
     }
  .nav-button {
-    /* width: 120px; */
     font-size: 10px;
+    
 } 
 
   .nav-menu{
     width: 300px;
     font-size: 13px;
+    margin-left: 20px;
   
   }
 
@@ -146,9 +147,7 @@
     .nav-bar{
       width: 100%;
     }
- .nav-button {
-    /* width: 150px; */
-} 
+
 
   .nav-menu{
     width: 300px;

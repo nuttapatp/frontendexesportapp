@@ -68,10 +68,27 @@
   margin-left: 20px; 
 }
 
+
+.new-bannerSearch {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  z-index: 1;
+  width: 60px;
+   position: absolute;;
+  right: 220px;
+  top: 0px;
+}
+
+
+  .shoe-image{
+    position: relative;
+  }
+
+
 /* Filtter */
-
-
-
 
 .filter-bar {
  display: flex;
@@ -116,7 +133,6 @@
 .filter-bar select,
 .filter-bar input[type='range']:focus {
   outline: none;
-  /* border-color: #333; */
   background-color: #f0f0f0;
 }
 
@@ -124,7 +140,10 @@
   margin-right: 10px;
 }
 
-
+.search-result{
+    display: flex;
+    justify-content: center;
+  }
 
 
 @media screen and (max-width: 479px) {
@@ -141,7 +160,10 @@
   .filter-bar {
     font-size: 12px !important;
   }
-
+.search-result{
+    display: flex;
+    justify-content: center;
+  }
 
 }
 
@@ -164,18 +186,27 @@
        padding:0px !important;
        font-size: 12px;
   }
-
+.search-result{
+      display: flex;
+    justify-content: center;
+  }
 
 
 }
 
 @media screen and (min-width: 769px) and (max-width: 1059px) {
  
-
+.search-result{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 
 @media screen and (min-width: 1060px) and (max-width: 1472px) {
-
-
+ 
+  .search-result{
+      display: flex;
+    justify-content: center;
+  }
 }

@@ -48,6 +48,8 @@ export default function Shoelist() {
   const [priceRange, setPriceRange] = useState([0, 5000]);
   const [selectedSort, setSelectedSort] = useState("max-min");
   const [selectedType, setSelectedType] = useState("SOCCER");
+    const [filterStatus, setFilterStatus] = useState("all"); 
+
 
   const additionalImages = {
     NIKE: [nikeImage1, nikeImage2, nikeImage3],
@@ -55,7 +57,6 @@ export default function Shoelist() {
     UMBRO: [umbroImage1, umbroImage2, umbroImage3],
     PUMA: [pumaImage1, pumaImage2, pumaImage3],
     NEWBALANCE: [newbalanceImage1, newbalanceImage2, newbalanceImage3],
-    // Add more brand names and corresponding image paths here
   };
 
   const applyFiltersAndSort = (products) => {
@@ -65,13 +66,24 @@ export default function Shoelist() {
         product.prod_sex === selectedFilter &&
         product.prod_price >= priceRange[0] &&
         product.prod_price <= priceRange[1] &&
-        product.prod_type === selectedType
+        product.prod_type === selectedType &&
+        (filterStatus === "all" ||
+          (filterStatus === "new" && product.new_arrival) ||
+          (filterStatus === "sale" && product.on_sale))
     );
 
     if (selectedSort === "max-min") {
-      filteredProducts.sort((a, b) => b.prod_price - a.prod_price);
+      filteredProducts.sort((a, b) => {
+        const priceA = a.on_sale ? a.sale_price : a.prod_price;
+        const priceB = b.on_sale ? b.sale_price : b.prod_price;
+        return priceB - priceA;
+      });
     } else if (selectedSort === "min-max") {
-      filteredProducts.sort((a, b) => a.prod_price - b.prod_price);
+      filteredProducts.sort((a, b) => {
+        const priceA = a.on_sale ? a.sale_price : a.prod_price;
+        const priceB = b.on_sale ? b.sale_price : b.prod_price;
+        return priceA - priceB;
+      });
     }
 
     setFilteredProductData(filteredProducts);
@@ -113,6 +125,7 @@ export default function Shoelist() {
     priceRange,
     selectedType,
     selectedSort,
+    filterStatus,
   ]);
 
   const handleBrandChange = (brand) => {
@@ -190,6 +203,15 @@ export default function Shoelist() {
           <option value="F">F</option>
         </select>
 
+        <select
+          value={filterStatus}
+          onChange={(e) => setFilterStatus(e.target.value)}
+        >
+          <option value="all">All</option>
+          <option value="new">New Arrival</option>
+          <option value="sale">On Sale</option>
+        </select>
+
         <div>
           <div>
             <label>Max Price: ฿{priceRange[1]}</label>
@@ -226,18 +248,16 @@ export default function Shoelist() {
       <div className="shoe-list">
         {filteredProductData.map((product) => (
           <div key={product._id} className="shoe-item">
-            <div className="brand-name">
-              {/* {formatBrandName(product.brand_name)} */}
-            </div>{" "}
-            {/* Added Here */}
+            <div className="brand-name"></div>{" "}
             <Link to={`/singleproduct/${product._id}`} className="shoe-link">
+              {product.new_arrival && (
+                <div className="new-bannerShoelist">NEW</div>
+              )}
               <img
                 src={product.product_image}
                 alt={product.prod_name}
                 className="shoe-image"
               />
-
-              {product.new_arrival && <div className="new-banner">NEW</div>}
             </Link>
             {product.on_sale ? (
               <div className="price-container">
@@ -247,9 +267,12 @@ export default function Shoelist() {
                 </div>
               </div>
             ) : (
-              <div className="original-price">฿ {product.prod_price}</div>
+              <div className="original-price">
+                ฿ {product.prod_price}
+                <br />
+                <br />
+              </div>
             )}
-            {/* <div className="brand-name">{product.brand_name}</div> */}
             <div className="product-name">{product.prod_name}</div>
           </div>
         ))}

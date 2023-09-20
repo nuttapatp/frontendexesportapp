@@ -6,8 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import StoreDetails from "./StoreDetails";
 import "./typeshoe.css";
-import { useParams ,Link} from "react-router-dom";
-
+import { useParams, Link } from "react-router-dom";
 
 import logo1 from "../assets/logo/free delivery.png";
 import logo2 from "../assets/logo/Shoe.png";
@@ -21,19 +20,17 @@ import logo9 from "../assets/logo/line.png";
 import logo10 from "../assets/logo/facebook.png";
 import logo11 from "../assets/logo/messenger.png";
 
-
 export default function Typeshoe() {
   const [productData, setProductData] = useState([]);
   const { typeName } = useParams();
   const { brandName } = useParams();
-  const [filteredProductData, setFilteredProductData] = useState([]); // State for filtered product data
-  const [selectedBrand, setSelectedBrand] = useState(brandName); // State for selected brand
-
+  const [filteredProductData, setFilteredProductData] = useState([]); 
+  const [selectedBrand, setSelectedBrand] = useState(brandName); 
   const [selectedFilter, setSelectedFilter] = useState("M");
   const [priceRange, setPriceRange] = useState([0, 10000]);
   const [selectedSort, setSelectedSort] = useState("max-min");
   const [selectedType, setSelectedType] = useState("");
-
+  const [filterStatus, setFilterStatus] = useState("all"); 
   useEffect(() => {
     async function fetchData() {
       try {
@@ -55,29 +52,36 @@ export default function Typeshoe() {
 
   useEffect(() => {
     applyFiltersAndSort();
-  }, [selectedFilter, priceRange, selectedType, selectedSort]);
+  }, [selectedFilter, priceRange, selectedType, selectedSort, filterStatus]);
 
   const applyFiltersAndSort = () => {
-    let filteredProducts = productData.filter(
-      (product) =>
-        product.prod_sex === selectedFilter &&
-        product.prod_price >= priceRange[0] &&
-        product.prod_price <= priceRange[1] &&
-        (selectedType === "" || product.prod_type === selectedType)
-    );
+   let filteredProducts = productData.filter((product) => {
+     return (
+       product.prod_sex === selectedFilter &&
+       product.prod_price >= priceRange[0] &&
+       product.prod_price <= priceRange[1] &&
+       (selectedType === "" || product.prod_type === selectedType) &&
+       (filterStatus === "all" ||
+         (filterStatus === "new" && product.new_arrival) ||
+         (filterStatus === "sale" && product.on_sale))
+     );
 
-     const onTypeChange = (filteredShoes) => {
-       setProductData(filteredShoes);
-       setSelectedType(
-         filteredShoes.length > 0 ? filteredShoes[0].prod_type : ""
-       );
-     };
+      setFilteredProductData(filteredProducts);
+   });
 
-    if (selectedSort === "max-min") {
-      filteredProducts.sort((a, b) => b.prod_price - a.prod_price);
-    } else if (selectedSort === "min-max") {
-      filteredProducts.sort((a, b) => a.prod_price - b.prod_price);
-    }
+    const onTypeChange = (filteredShoes) => {
+      setProductData(filteredShoes);
+      setSelectedType(
+        filteredShoes.length > 0 ? filteredShoes[0].prod_type : ""
+      );
+    };
+
+    filteredProducts.sort((a, b) => {
+      const priceA = a.on_sale ? a.sale_price : a.prod_price;
+      const priceB = b.on_sale ? b.sale_price : b.prod_price;
+
+      return selectedSort === "max-min" ? priceB - priceA : priceA - priceB;
+    });
 
     setFilteredProductData(filteredProducts);
   };
@@ -97,6 +101,15 @@ export default function Typeshoe() {
         >
           <option value="M">M</option>
           <option value="F">F</option>
+        </select>
+
+        <select
+          value={filterStatus}
+          onChange={(e) => setFilterStatus(e.target.value)}
+        >
+          <option value="all">All</option>
+          <option value="new">New Arrival</option>
+          <option value="sale">On Sale</option>
         </select>
 
         <div>
@@ -131,7 +144,9 @@ export default function Typeshoe() {
                 alt={product.prod_name}
                 className="shoe-image"
               />
-              {product.new_arrival && <div className="new-banner">NEW</div>}
+              {product.new_arrival && (
+                <div className="new-banner-type">NEW</div>
+              )}
             </Link>
             {product.on_sale ? (
               <div className="price-container">
@@ -141,7 +156,11 @@ export default function Typeshoe() {
                 </div>
               </div>
             ) : (
-              <div className="original-price">฿ {product.prod_price}</div>
+              <div className="original-price">
+                ฿ {product.prod_price}
+                <br />
+                <br />{" "}
+              </div>
             )}
             <div className="product-name">{product.prod_name}</div>
           </div>

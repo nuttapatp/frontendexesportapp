@@ -6,7 +6,6 @@
 
 .homepage-container {
   position: relative;
-  /* Add other styling as needed */
 }
 
 .searchbar-sticky-container {
@@ -20,7 +19,6 @@
 .history-bar{
     width: 100%;
     color:red;
-    /* background-color: aquamarine; */
     height: 40px;
 }
 
@@ -29,15 +27,10 @@
 
 .product-single {
   display: flex;
-  /* align-items: center; */
-  /* background-color: red; */
-  /* width: 400px;  */
-  /* margin-left: 120px;  */
   margin-top: 100px;
 }
 
 .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
@@ -45,7 +38,6 @@
 
 
 .product-single {
-  /* position: relative; */
 }
 
 .brand-name{
@@ -55,14 +47,11 @@
 
 .product-name{
     font-size: 18px !important;
-  
     margin-top: 20px !important;
      margin-left: 0px !important;
 }
 
 .product-details {
-  /* flex: 0; */
-  /* padding: 20px; */
   width: 500px;
   font-family:   "Open Sans",sans-serif;
   margin-left: 100px;
@@ -201,15 +190,15 @@
 
 
 .new-banner {
-  position: absolute;
-  top: 10px;  
-  left: 10px;
   background-color: red;
   color: white;
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 3px;
   z-index: 1;
+  margin-left: 0px;
+  width: 60px;
+  margin-top: -30px;
 }
 
 .strikethrough {
@@ -264,6 +253,7 @@
     object-fit: cover; 
 }
 
+
 /* Style for the vertical bar that contains thumbnail images */
 .vertical-thumbnail-bar {
   flex: 0 0 60px; 
@@ -279,7 +269,6 @@
     border: 2px solid transparent;
     transition: border 0.2s;
 }
-
 
 
 
@@ -309,8 +298,6 @@ button[onclick*="down"] {
   display: flex;
   align-items: flex-start;
   margin-top: 100px;
-  /* width: 900px;  */
-  /* margin-left: 100ppx; */
 
 }
 .product-image-container {
@@ -345,23 +332,29 @@ button {
 
 
 
-
-
 @media screen and (max-width: 564px) {
 
 
+.new-banner {
+  position: absolute;;
+  right: 270px;
+  top: 280px;
+}
+
+  .product-image{
+    position: relative;
+  }
       .product-single{
    
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   
   .product-image-section,
   .product-details {
       justify-content: center;
        align-items: center;
-  /* display: grid; */
     
   }
 
@@ -386,16 +379,13 @@ button {
 
 
     .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
 
 }
 
-.product-buy{
-  /* background-color: red; */
-}
+
 
 .product-image{
   width: 150px;
@@ -413,8 +403,8 @@ button {
 @media screen and (min-width: 565px) and (max-width: 768px) {
 
 
-      .product-single{
-   
+    .product-single{
+
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -422,7 +412,6 @@ button {
   
   .product-image-section,
   .product-details {
-    /* width: 100%; */
   }
   .product-image-section {
     margin-top: 20px;
@@ -432,13 +421,21 @@ button {
     margin-left: 10px;
   }
 
-
+  .history-bar{
+    margin-bottom: 40px;
+  }
 
     .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
+}
+
+
+
+.image-change-controls{
+  text-align: left;
+  margin-left: 100px;
 }
 
 }
@@ -451,7 +448,6 @@ button {
     justify-content: center;
     align-items: center;
     display: flex;
-    /* flex-direction: column; */
     margin-top: 20px;
   
   }
@@ -459,8 +455,7 @@ button {
   .product-image-section,
   .product-details {
     width: 400px;
-        /* justify-content: center; */
-        margin-left: 0px;
+        margin-left: 100px;
   }
   .product-image-section {
     margin-top: 20px;
@@ -471,10 +466,10 @@ button {
   }
 
   .single-product-container{
-  /* background-color: red; */
   justify-content: center;
   align-items: center;
   display: grid;
+ 
 }
 
 }
@@ -489,8 +484,6 @@ button {
     margin-left: 150px;
     
   }
-
-
 
 
 }
