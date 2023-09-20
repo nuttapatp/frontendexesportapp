@@ -107,7 +107,7 @@ export default function SingleProduct() {
         <Categorybar />
       </div>
       <div className="history-bar">
-        <a href={`http://localhost:3000/singleproduct/${id}`}>
+        <a href={`https://frontendexesportapp.vercel.app/brands/${shoe.prod_name}`}>
           {shoe.brand_name}
         </a>
         <span>&gt;</span>
