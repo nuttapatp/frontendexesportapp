@@ -114,7 +114,7 @@ const handleOrder = async () => {
       alert("Order placed successfully!");
       localStorage.removeItem("cartItems");
       setProductDetails({});
-              window.location.href = "/payment";
+              window.location.href = "/checkout";  
 
     } else {
       const errorData = await response.json();
