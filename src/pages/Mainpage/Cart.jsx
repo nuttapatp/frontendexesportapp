@@ -114,6 +114,8 @@ const handleOrder = async () => {
       alert("Order placed successfully!");
       localStorage.removeItem("cartItems");
       setProductDetails({});
+              window.location.href = "/payment";
+
     } else {
       const errorData = await response.json();
       alert(`Failed to place the order: ${errorData.message}`);
