@@ -69,8 +69,10 @@ export default function Checkout() {
           }
         })
       );
-
+      console.log("Fetched product details:", details);
       setProductDetails(details);
+        
+
     };
 
     fetchProductDetails();
