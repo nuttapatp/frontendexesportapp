@@ -1,52 +1,73 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./checkout.css";
 
-const ProductDisplay = ({ cartItems, productDetails, totalAmount }) => (
-  <section>
-    <div className="product">
-      <h3>Your Cart</h3>
-      <ul>
-        {cartItems.map(
-          (item) =>
-            productDetails[item.id] && (
-              <li key={item.id}>
-                <img
-                  src={productDetails[item.id].product_image}
-                  alt={productDetails[item.id].prod_name}
-                />
-                <p>{productDetails[item.id].prod_name}</p>
-                <p>Quantity: {item.quantity}</p>
-                <p>Size: {item.size}</p>
-                <p>Price: {productDetails[item.id].prod_price}</p>
-              </li>
-            )
-        )}
-      </ul>
-      <h3>Total Amount: ${totalAmount}</h3>
-    </div>
-    <form action="/create-checkout-session" method="POST">
-      <button type="submit">Checkout</button>
-    </form>
-  </section>
-);
-
-const Message = ({ message }) => (
-  <section>
-    <p>{message}</p>
-  </section>
-);
-
-export default function Checkout() {
+const Checkout = ({ showModalVersion = false }) => {
+  const [cartItems, setCartItems] = useState([]);
+  const [products, setProducts] = useState([]);
   const [message, setMessage] = useState("");
-  const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-  const [productDetails, setProductDetails] = useState({});
+
+  useEffect(() => {
+    // Load cart items from local storage
+    const savedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    setCartItems(savedCartItems);
+  }, []);
+
+  useEffect(() => {
+    // Fetch product details for each item in the cart
+    Promise.all(
+      cartItems.map((item) =>
+        axios.get(`http://localhost:3000/singleproduct/${item.id}`)
+      )
+    ).then((responses) => {
+      const fetchedProducts = responses.map((res) => res.data);
+      setProducts(fetchedProducts);
+    });
+  }, [cartItems]);
+
+  const handleCheckout = async () => {
+    console.log("Sending products data:", JSON.stringify(products));
+    console.log("Sending products data:", JSON.stringify(products.prod_name));
+
+    const refinedProducts = products.map((product) => ({
+      prod_name: product.prod_name,
+      product_image: product.product_image,
+      prod_price: product.prod_price,
+    }));
+
+    try {
+      const response = await fetch(
+        "http://localhost:4242/create-checkout-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(refinedProducts), // Send the products data
+        }
+      );
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Server responded with: ${errorText}`);
+      }
+
+      const session = await response.json();
+      if (session.url) {
+        window.location.href = session.url; // Redirect to Stripe Checkout
+      } else {
+        console.error("Failed to create checkout session.");
+      }
+    } catch (error) {
+      console.error("Error during checkout:", error.message);
+    }
+  };
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
-
     if (query.get("success")) {
       setMessage("Order placed! You will receive an email confirmation.");
     }
-
     if (query.get("canceled")) {
       setMessage(
         "Order canceled -- continue to shop around and checkout when you're ready."
@@ -54,47 +75,33 @@ export default function Checkout() {
     }
   }, []);
 
-  useEffect(() => {
-    const fetchProductDetails = async () => {
-      const details = {};
-
-      await Promise.all(
-        cartItems.map(async (item) => {
-          if (item.id && !details[item.id]) {
-            const response = await fetch(
-              `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${item.id}`
-            );
-            const data = await response.json();
-            details[item.id] = data;
-          }
-        })
-      );
-      console.log("Fetched product details:", details);
-      setProductDetails(details);
-        
-
-    };
-
-    fetchProductDetails();
-  }, [cartItems]);
-
-  const totalAmount = cartItems.reduce((total, item) => {
-    if (productDetails[item.id]) {
-      const price = productDetails[item.id].on_sale
-        ? productDetails[item.id].sale_price
-        : productDetails[item.id].prod_price;
-      return total + price * item.quantity;
-    }
-    return total;
-  }, 0);
-
-  return message ? (
-    <Message message={message} />
-  ) : (
-    <ProductDisplay
-      cartItems={cartItems}
-      productDetails={productDetails}
-      totalAmount={totalAmount}
-    />
+  return (
+    <div className="checkout-container">
+      {(showModalVersion = false)}
+      {message ? (
+        <p>{message}</p>
+      ) : (
+        <div>
+          <h3 className="checkout-heading">Checkout</h3>
+          <ul className="checkout-list">
+            {products.map((product) => (
+              <li key={product._id} className="checkout-item">
+                <img src={product.product_image} alt={product.prod_name} />
+                <p className="checkout-item-description">{product.prod_name}</p>
+                <p className="checkout-item-description">
+                  Price: {product.prod_price}
+                </p>
+              </li>
+            ))}
+          </ul>
+          
+          <button className="checkout-button" onClick={handleCheckout}>
+            Proceed to Payment
+          </button>
+        </div>
+      )}
+    </div>
   );
-}
+};
+
+export default Checkout;

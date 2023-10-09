@@ -102,6 +102,7 @@ const Homepage = () => {
 
           <div>
             <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2c8ffa98d3d800c113af7">
+            {/* <a href="http://localhost:3001/singleproduct/64f2c8ffa98d3d800c113af7"> */}
               <img src={gif1} alt="GIF" className="new-arrival-gif" />
             </a>
           </div>
