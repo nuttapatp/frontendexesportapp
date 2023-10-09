@@ -20,7 +20,8 @@ export default function Login() {
     e.preventDefault();
     try {
       const customers = await axios.get(
-        "https://backendexesportapp-93e0c67ee387.herokuapp.com/customer/"
+        // "https://backendexesportapp-93e0c67ee387.herokuapp.com/customer/"
+        "http://localhost:3000/customer"
       );
       const foundUser = customers.data.find(
         (user) => user.email === email && user.password === password

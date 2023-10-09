@@ -18,7 +18,7 @@ import Search from "./pages/Mainpage/Search";
 import Login from "./pages/Mainpage/Login";
 import Typeshoe from "./components/Typeshoe.jsx";
 import Sizepage from "./pages/Mainpage/Sizepage.jsx";
-import Checkout from "./pages/Mainpage/Checkout.jsx";
+import Checkout from "./pages/Mainpage/Checkout.jsx"
 
 const stripePromise = loadStripe(
   "pk_test_51Nx8oJGZMu4IjZdEMDMqhvnhXj1noVvzPXvT36PYZX20lqcQhtFTAFJ0XecDzqu5uDHNNJi25hWlq96GpQ20Kgeh00B0xBAWlO"
@@ -43,7 +43,7 @@ function App() {
               <Route path="/search" element={<Search />} />
               <Route path="/type/:typeName" element={<Typeshoe />} />
               <Route path="/sizepage" element={<Sizepage />} />
-              <Route path="/checkout" element={<Checkout />} />
+              {/* <Route path="/checkout" element={<Checkout />} /> */}
             </Routes>
           </Router>
         </Elements>
