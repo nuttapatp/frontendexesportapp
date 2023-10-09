@@ -17,7 +17,11 @@ const Checkout = ({ showModalVersion = false }) => {
     // Fetch product details for each item in the cart
     Promise.all(
       cartItems.map((item) =>
-        axios.get(`http://localhost:3000/singleproduct/${item.id}`)
+        axios.get(
+          // `http://localhost:3000/singleproduct/${item.id}`
+          `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${item.id}`
+        
+        )
       )
     ).then((responses) => {
       const fetchedProducts = responses.map((res) => res.data);
