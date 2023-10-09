@@ -4,6 +4,8 @@ import Searchbar from "./Searchbar";
 import Categorybar from "./Categorybar";
 import "./cart.css";
 import StoreDetails from "..//..//components/StoreDetails";
+import { useNavigate } from "react-router-dom";
+import Checkout from "./Checkout";
 
 
 import logo1 from "../../assets/logo/free delivery.png";
@@ -20,11 +22,14 @@ import logo11 from "../../assets/logo/messenger.png";
 
 export default function Cart() {
   const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-  
+  const navigate = useNavigate();
   const [productDetails, setProductDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   console.log("cartItems:", cartItems); // Add this line to log cartItems
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume the user is not logged in by default
+  const [redirectToCheckout, setRedirectToCheckout] = useState(false);
+  const [showCheckoutModal, setShowCheckoutModal] = useState(false);
+
 
   
   
@@ -38,12 +43,14 @@ export default function Cart() {
           if (item.id && !details[item.id]) {
             const response = await fetch(
               `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${item.id}`
+              // `http://localhost:3000/singleproduct/${item.id}`
             );
             const data = await response.json();
             details[item.id] = data;
           }
         })
       );
+              console.log("Fetched product details:", details);
 
       setProductDetails(details);
       setIsLoading(false);
@@ -79,50 +86,13 @@ export default function Cart() {
       return updatedDetails;
     });
   };
-const handleOrder = async () => {
+const handleOrder = () => {
   if (!isLoggedIn) {
     alert("Please login before proceeding with your order.");
     return;
   }
 
-
-  const orderData = {
-
-    userId: localStorage.getItem("userId"),
-    items: cartItems.map((item) => ({
-      productId: item.id,
-      quantity: item.quantity,
-      size: item.size,
-    })),
-  };
-
-  try {
-    const response = await fetch(
-      "https://backendexesportapp-93e0c67ee387.herokuapp.com/orders",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-
-          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
-        },
-        body: JSON.stringify(orderData),
-      }
-    );
-
-    if (response.ok) {
-      alert("Order placed successfully!");
-      localStorage.removeItem("cartItems");
-      setProductDetails({});
-              window.location.href = "/checkout";  
-
-    } else {
-      const errorData = await response.json();
-      alert(`Failed to place the order: ${errorData.message}`);
-    }
-  } catch (error) {
-    alert("An error occurred. Please try again.");
-  }
+  setShowCheckoutModal(true);
 };
 
 
@@ -144,6 +114,7 @@ useEffect(() => {
 
   return (
     <div>
+      {/* {redirectToCheckout && <Redirect to="/checkout" />} */}
       <Navbar />
       <div className="searchbar-sticky-container">
         <Searchbar />
@@ -220,10 +191,24 @@ useEffect(() => {
                 className="order-button"
                 disabled={cartItems.length === 0}
               >
-                Order
+                Checkout
               </button>
             </div>
           </div>
+          {showCheckoutModal && (
+            <div className="checkout-modal">
+              <div className="checkout-modal-content">
+            
+                <Checkout showModalVersion={true} />
+                  <p className="checkout-total-amount">
+                  Grand Total: ฿{totalAmount}
+                </p>
+                <button onClick={() => setShowCheckoutModal(false)}>
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       )}
 

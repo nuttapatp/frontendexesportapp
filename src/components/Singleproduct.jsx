@@ -31,6 +31,7 @@ export default function SingleProduct() {
     // Fetch detailed information about the shoe using the API
     fetch(
       `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${id}`
+      // `http://localhost:3000/singleproduct/${id}`
     )
       .then((response) => response.json()) // Parse the response as JSON
       .then((data) => {
@@ -107,11 +108,15 @@ export default function SingleProduct() {
         <Categorybar />
       </div>
       <div className="history-bar">
-        <a href={`https://frontendexesportapp.vercel.app/brands/${shoe.brand_name}`}>
+        <a
+          // href={`http://localhost:3000/brands/${shoe.brand_name}`}
+          href={`https://frontendexesportapp.vercel.app/brands/${shoe.brand_name}`}
+        >
           {shoe.brand_name}
         </a>
         <span>&gt;</span>
         <a
+          // href={`http://localhost:3000/type/${shoe.prod_type}`}
           href={`https://frontendexesportapp.vercel.app/type/${shoe.prod_type}`}
         >
           {shoe.prod_type}
