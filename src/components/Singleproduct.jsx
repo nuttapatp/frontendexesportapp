@@ -6,7 +6,6 @@ import "./singleproduct.css";
 import { Link } from "react-router-dom";
 
 import StoreDetails from "./StoreDetails";
-import Newsletter from "./Newsletter";
 import logo1 from "./../assets/logo/free delivery.png";
 import logo2 from "./../assets/logo/Shoe.png";
 import logo3 from "./../assets/logo/guard.png";
@@ -54,7 +53,19 @@ export default function SingleProduct() {
     setSelectedSize(size);
   };
 
+  const isUserLoggedIn = () => {
+    
+    return !!localStorage.getItem("userToken"); 
+    
+  };
+
+
   const handleAddToCartClick = () => {
+    if (!isUserLoggedIn()) {
+      alert("You need to log in before adding items to the cart.");
+      return;
+    }
+
     if (!selectedSize) {
       alert("Please select a size before adding to cart.");
       return;
@@ -87,7 +98,7 @@ export default function SingleProduct() {
     shoe.product_image2,
     shoe.product_image3,
     shoe.product_image4,
-  ].filter(Boolean); // To remove any null or undefined values
+  ].filter(Boolean); 
 
   const handleImageChange = (direction) => {
     if (direction === "up" && selectedImage > 0) {

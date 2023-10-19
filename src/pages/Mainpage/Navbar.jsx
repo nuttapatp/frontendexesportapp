@@ -24,7 +24,6 @@ const handleLogout = () => {
   // Clear the entire local storage
   localStorage.clear();
 
-  // Redirect to homepage
   navigate("/");
 };
 

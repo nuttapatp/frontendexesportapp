@@ -17,7 +17,10 @@ const Checkout = ({ showModalVersion = false }) => {
     // Fetch product details for each item in the cart
     Promise.all(
       cartItems.map((item) =>
-        axios.get(`http://localhost:3000/singleproduct/${item.id}`)
+        axios.get(
+          // `http://localhost:3000/singleproduct/${item.id}`
+          `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${item.id}`
+        )
       )
     ).then((responses) => {
       const fetchedProducts = responses.map((res) => res.data);
@@ -25,24 +28,42 @@ const Checkout = ({ showModalVersion = false }) => {
     });
   }, [cartItems]);
 
+
+  
   const handleCheckout = async () => {
     console.log("Sending products data:", JSON.stringify(products));
     console.log("Sending products data:", JSON.stringify(products.prod_name));
 
-    const refinedProducts = products.map((product) => ({
-      prod_name: product.prod_name,
-      product_image: product.product_image,
-      prod_price: product.prod_price,
-    }));
+    
+
+    const refinedProducts = products.map((product) => {
+      const associatedCartItem = cartItems.find(
+        (item) => item.id === product._id
+      );
+      const price = product.on_sale ? product.sale_price : product.prod_price;
+      return {
+        prod_name: product.prod_name,
+        product_image: product.product_image,
+        prod_price: price,
+        quantity: associatedCartItem ? associatedCartItem.quantity : 1,
+        size: associatedCartItem ? associatedCartItem.size : "N/A", // Adding size here
+      };
+    });
 
     try {
+      console.log("Refined products:", refinedProducts);
+
       const response = await fetch(
-        "http://localhost:4242/create-checkout-session",
+        // "http://localhost:4242/server-route/create-checkout-session",
+        "https://backendexesportapp-93e0c67ee387.herokuapp.com/server-route/create-checkout-session"
+,
+
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
+
           body: JSON.stringify(refinedProducts), // Send the products data
         }
       );
@@ -54,7 +75,7 @@ const Checkout = ({ showModalVersion = false }) => {
 
       const session = await response.json();
       if (session.url) {
-        window.location.href = session.url; // Redirect to Stripe Checkout
+        window.location.href = session.url; 
       } else {
         console.error("Failed to create checkout session.");
       }
@@ -84,17 +105,22 @@ const Checkout = ({ showModalVersion = false }) => {
         <div>
           <h3 className="checkout-heading">Checkout</h3>
           <ul className="checkout-list">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <li key={product._id} className="checkout-item">
                 <img src={product.product_image} alt={product.prod_name} />
-                <p className="checkout-item-description">{product.prod_name}</p>
-                <p className="checkout-item-description">
-                  Price: {product.prod_price}
-                </p>
+                <div className="product-info">
+                  <p className="product-name-checkout">{product.prod_name}</p>
+                  Price:{" "}
+                  {product.on_sale ? product.sale_price : product.prod_price}
+                  <p className="product-quantity">
+                    Quantity: {cartItems[index].quantity}
+                  </p>
+                  <p className="product-size">Size: {cartItems[index].size}</p>
+                </div>
               </li>
             ))}
           </ul>
-          
+
           <button className="checkout-button" onClick={handleCheckout}>
             Proceed to Payment
           </button>
