@@ -25,7 +25,7 @@ export default function Cart() {
   const navigate = useNavigate();
   const [productDetails, setProductDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  console.log("cartItems:", cartItems); // Add this line to log cartItems
+  console.log("cartItems:", cartItems); 
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume the user is not logged in by default
   const [redirectToCheckout, setRedirectToCheckout] = useState(false);
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
@@ -131,10 +131,15 @@ useEffect(() => {
                 {cartItems.map((item) =>
                   productDetails[item.id] ? (
                     <li key={item.ordernumber} className="cart-item">
-                      <img
-                        src={productDetails[item.id].product_image}
-                        alt={productDetails[item.id].prod_name}
-                      />
+                      <a
+                        href={`https://frontendexesportapp.vercel.app/singleproduct/${item.id}`}
+                      >
+                        <img
+                          src={productDetails[item.id].product_image}
+                          alt={productDetails[item.id].prod_name}
+                        />
+                      </a>
+
                       <div className="cart-item-details">
                         <div className="left-details">
                           <p className="detail-item-brand">
@@ -197,9 +202,8 @@ useEffect(() => {
           {showCheckoutModal && (
             <div className="checkout-modal">
               <div className="checkout-modal-content">
-            
                 <Checkout showModalVersion={true} />
-                  <p className="checkout-total-amount">
+                <p className="checkout-total-amount">
                   Grand Total: ฿{totalAmount}
                 </p>
                 <button onClick={() => setShowCheckoutModal(false)}>
