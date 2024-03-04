@@ -29,7 +29,7 @@ export default function SingleProduct() {
   useEffect(() => {
     // Fetch detailed information about the shoe using the API
     fetch(
-      `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${id}`
+      `https://backendendexesportapp-90771f5053d5.herokuapp.com/singleproduct/${id}`
       // `http://localhost:3000/singleproduct/${id}`
     )
       .then((response) => response.json()) // Parse the response as JSON
