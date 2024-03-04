@@ -42,7 +42,7 @@ export default function Cart() {
         cartItems.map(async (item) => {
           if (item.id && !details[item.id]) {
             const response = await fetch(
-              `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${item.id}`
+              `https://backendendexesportapp-90771f5053d5.herokuapp.com/singleproduct/${item.id}`
               // `http://localhost:3000/singleproduct/${item.id}`
             );
             const data = await response.json();

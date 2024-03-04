@@ -16,7 +16,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const result = await axios.post(
-        "https://backendexesportapp-93e0c67ee387.herokuapp.com/customer/",
+        "https://backendendexesportapp-90771f5053d5.herokuapp.com/customer/",
         {
           name,
           email,

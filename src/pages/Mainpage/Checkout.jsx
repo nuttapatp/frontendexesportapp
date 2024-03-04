@@ -55,9 +55,7 @@ const Checkout = ({ showModalVersion = false }) => {
 
       const response = await fetch(
         // "http://localhost:4242/server-route/create-checkout-session",
-        "https://backendexesportapp-93e0c67ee387.herokuapp.com/server-route/create-checkout-session"
-,
-
+        "https://backendendexesportapp-90771f5053d5.herokuapp.com/server-route/create-checkout-session",
         {
           method: "POST",
           headers: {

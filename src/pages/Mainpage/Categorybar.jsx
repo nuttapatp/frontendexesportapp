@@ -37,7 +37,7 @@ function Categorybar({ onBrandChange, onTypeChange }) {
     console.log("Selected brand:", brandName);
     try {
       const response = await axios.get(
-        `https://backendexesportapp-93e0c67ee387.herokuapp.com/brands/${brandName}`
+        `https://backendendexesportapp-90771f5053d5.herokuapp.com/brands/${brandName}`
       );
       const allShoes = response.data.products;
 
@@ -57,7 +57,7 @@ function Categorybar({ onBrandChange, onTypeChange }) {
     async function fetchTypeData() {
       try {
         const response = await axios.get(
-          "https://backendexesportapp-93e0c67ee387.herokuapp.com/type/"
+          "https://backendendexesportapp-90771f5053d5.herokuapp.com/type/"
         );
         const allTypes = response.data.type;
         setTypeData(allTypes);
@@ -73,7 +73,7 @@ function Categorybar({ onBrandChange, onTypeChange }) {
     console.log("Selected type:", typeName);
     try {
       const response = await axios.get(
-        `https://backendexesportapp-93e0c67ee387.herokuapp.com/${typeName}`
+        `https://backendendexesportapp-90771f5053d5.herokuapp.com/${typeName}`
       );
       const allShoes = response.data.products;
 
