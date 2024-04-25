@@ -11,7 +11,7 @@ import { useUser } from "..//../components/context/UserContext";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // Add this line to get the navigate function
+  const navigate = useNavigate(); 
   const [showWarning, setShowWarning] = useState(false);
   const { setUser } = useUser();
 
@@ -30,9 +30,11 @@ export default function Login() {
     if (foundUser) {
       console.log("Login successful");
       localStorage.setItem("userToken", "sampleToken");
-      localStorage.setItem("userId", foundUser._id); // Save the user's _id in local storage
+      localStorage.setItem("userId", foundUser._id); 
       localStorage.setItem("userEmail", foundUser.email);
 
+         localStorage.setItem("userData", JSON.stringify(foundUser));
+      
       setUser(foundUser);
       setShowWarning(false);
       navigate("/");

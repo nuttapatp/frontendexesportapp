@@ -8,7 +8,7 @@ const Newsletter = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://backendexesportapp-93e0c67ee387.herokuapp.com/email/",
+        "https://backendendexesportapp-90771f5053d5.herokuapp.com/email/",
         {
           email,
         }
