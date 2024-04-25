@@ -60,8 +60,8 @@ const Homepage = () => {
       <Slider {...sliderSettings}>
         <div>
           <a href=
-          // "https://frontendexesportapp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6"
-          "`http://localhost:3000/singleproduct/64f2cd91a98d3d800c113ba6"
+          "https://frontendexesportapp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6"
+          // "`http://localhost:3000/singleproduct/64f2cd91a98d3d800c113ba6"
           >
             <img src={imageflash1} alt="Image 1" className="main-background" />
           </a>

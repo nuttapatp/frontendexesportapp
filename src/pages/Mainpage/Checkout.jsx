@@ -19,8 +19,7 @@ const Checkout = ({ showModalVersion = false }) => {
       cartItems.map((item) =>
         axios.get(
           // `http://localhost:3000/singleproduct/${item.id}`
-          `https://backendexesportapp-93e0c67ee387.herokuapp.com/singleproduct/${item.id}`
-        
+          `https://backendendexesportapp-90771f5053d5.herokuapp.com/singleproduct/${item.id}`
         )
       )
     ).then((responses) => {
