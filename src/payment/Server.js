@@ -2,6 +2,7 @@ const express = require("express");
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 const stripe = require("stripe")(stripeSecretKey);
+
 const app = express();
 const cors = require("cors");
 app.use(cors());
