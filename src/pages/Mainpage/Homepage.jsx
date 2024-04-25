@@ -59,7 +59,8 @@ const Homepage = () => {
       </div>
       <Slider {...sliderSettings}>
         <div>
-          <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6">
+          <a href=// "https://frontendexesportapp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6"
+          "`http://localhost:3000/singleproduct/64f2cd91a98d3d800c113ba6">
             <img src={imageflash1} alt="Image 1" className="main-background" />
           </a>
         </div>
@@ -84,7 +85,7 @@ const Homepage = () => {
         <div className="arrival-content">
           <Slider {...sliderSettings}>
             <div>
-              <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2d1c9a98d3d800c113ccd">
+              <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2cd91a98d3d800c113ba6">
                 <img src={imagenew1} alt="Image" className="main2-background" />
               </a>
             </div>
@@ -102,7 +103,7 @@ const Homepage = () => {
 
           <div>
             <a href="https://frontendexesportapp.vercel.app/singleproduct/64f2c8ffa98d3d800c113af7">
-            {/* <a href="http://localhost:3001/singleproduct/64f2c8ffa98d3d800c113af7"> */}
+              {/* <a href="http://localhost:3001/singleproduct/64f2c8ffa98d3d800c113af7"> */}
               <img src={gif1} alt="GIF" className="new-arrival-gif" />
             </a>
           </div>
